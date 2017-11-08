@@ -13,8 +13,9 @@
 
 ## Tools
 
-- [bcc](https://github.com/iovisor/bcc)
-- [ply](https://github.com/iovisor/ply)
+- [bcc](https://github.com/iovisor/bcc): The BPF Compiler Collection's `/tools` directory has the most comprehensive list of scripts that use eBPF, and the repo also includes great references for learning and writing eBPF programs.
+- [perf-tools](https://github.com/brendangregg/perf-tools): Most of the tools from `perf-tools`'s `/bin` directory has moved into the `bcc` repo, but there are some other useful sccripts especially for `uprobes` and `tracepoints`.
+- [ply](https://github.com/iovisor/ply): The primary goal of `ply` is to simplify writing test eBPF programs before doing the scaffolding that using something like the BPF Python library requires.
 
 ## Learning Resources
 
