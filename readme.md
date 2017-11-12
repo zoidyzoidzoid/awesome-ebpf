@@ -48,7 +48,11 @@
 
 ## Papers
 
-- S. Mccanne and V. Jacobson. [The BSD Packet Filter: A New Architecture for User-level Packet Capture](http://www.vodun.org/papers/net-papers/van_jacobson_the_bpf_packet_filter.pdf). *Proceedings of the USENIX Winter 1993 Conference*.
+- S. Mccanne and V. Jacobson (1993). [The BSD Packet Filter: A New Architecture for User-level Packet Capture](http://www.vodun.org/papers/net-papers/van_jacobson_the_bpf_packet_filter.pdf). *Proceedings of the USENIX Winter 1993 Conference*.
+- A. Begel and S. L. Graham (1999). [BPF+: Exploiting Global Data-flow Optimization in a Generalized Packet Filter Architecture](https://dl.acm.org/citation.cfm?id=316214). *ACM SIGCOMM Computer Communication Review*.
+- X. Wang *et al.* (2014). [Jitk : A Trustworthy In-Kernel Interpreter Infrastructure](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-wang_xi.pdf). *USENIX Symposium on Operating Systems Design and Implementation (OSDI)*.
+- Z. Ahmed, M. H. Alizai, and A. A. Syed (2016). [InKeV: In-Kernel Distributed Network Virtualization for DCN](https://ccronline.sigcomm.org/wp-content/uploads/2016/07/sigcomm-ccr-paper4.pdf). *ACM SIGCOMM Computer Communication Review*.
+- C.-C. Tu, J. Stringer, and J. Pettit (2017). [Building an Extensible Open vSwitch Datapath](https://dl.acm.org/citation.cfm?id=3139657). *ACM SIGOPS Operating Systems Review*.
 
 ## Contribute
 
