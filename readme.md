@@ -48,7 +48,7 @@
 
 ## Papers
 
-[The BSD Packet Filter: A New Architecture for User-level Packet Capture](http://www.vodun.org/papers/net-papers/van_jacobson_the_bpf_packet_filter.pdf)
+- S. Mccanne and V. Jacobson. [The BSD Packet Filter: A New Architecture for User-level Packet Capture](http://www.vodun.org/papers/net-papers/van_jacobson_the_bpf_packet_filter.pdf). *Proceedings of the USENIX Winter 1993 Conference*.
 
 ## Contribute
 
