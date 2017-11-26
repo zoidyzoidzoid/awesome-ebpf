@@ -20,46 +20,8 @@ Thank you to Quentin Monnet and Daniel Borkmann for their original work on [Dive
 
 ## What is BPF?
 
-BPF, as in **B**erkeley **P**acket **F**ilter, was initially conceived in 1992
-so as to provide a way to filter packets and to avoid useless packet copies
-from kernel to userspace. It initially consisted in a simple bytecode that is
-injected from userspace into the kernel, where it is checked by a verifier—to
-prevent kernel crashes or security issues—and attached to a socket, then run on
-each received packet. It was ported to Linux a couple of years later, and used
-for a small number of applications (tcpdump for example). The simplicity of the
-language as well as the existence of an in-kernel Just-In-Time (JIT) compiling
-machine for BPF were factors for the excellent performances of this tool.
-
-Then in 2013, Alexei Starovoitov completely reshaped it, started to add new
-functionalities and to improve the performances of BPF. This new version is
-designated as eBPF (for “extended BPF”), while the former becomes cBPF
-(“classic” BPF). New features such as maps and tail calls appeared. The JIT
-machines were rewritten. The new language is even closer to native machine
-language than cBPF was. And also, new attach points in the kernel have been
-created.
-
-Thanks to those new hooks, eBPF programs can be designed for a variety of use
-cases, that divide into two fields of applications. One of them is the domain
-of kernel tracing and event monitoring. BPF programs can be attached to kprobes
-and they compare with other tracing methods, with many advantages (and
-sometimes some drawbacks).
-
-The other application domain remains network programming. In addition to socket
-filter, eBPF programs can be attached to tc (Linux traffic control tool)
-ingress or egress interfaces and perform a variety of packet processing tasks,
-in an efficient way. This opens new perspectives in the domain.
-
-And eBPF performances are further leveraged through the technologies developed
-for the IO Visor project: new hooks have also been added for XDP (“eXpress Data
-Path”), a new fast path recently added to the kernel. XDP works in conjunction
-with the Linux stack, and relies on BPF to perform very fast packet processing.
-
-Even some projects such as P4, Open vSwitch,
-[consider](http://openvswitch.org/pipermail/dev/2014-October/047421.html)
-or started to approach BPF. Some others, such as CETH, Cilium, are entirely
-based on it. BPF is buzzing, so we can expect a lot of tools and projects to
-orbit around it soon…
-
+TODO: Update with concise overview of BPF (cBPF and eBPF), and what it's
+used for already.
 
 ## Resources
 
