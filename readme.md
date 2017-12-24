@@ -33,22 +33,20 @@ lower down in the list.
 
 ### Generic Resources About eBPF
 
--   The specification of BPF (both classic and extended versions) can be
-    found within the documentation of the Linux kernel, and in particular in file
-    [linux/Documentation/networking/filter.txt][filter.txt].
+-   [iovisor's Unofficial eBPF spec](https://github.com/iovisor/bpf-docs/blob/master/eBPF.md)
+    The kernel documentation is dense and not especially easy to read, so this summary
+    aims to be a simpler description of the eBPF language.
+
+-   [linux/Documentation/networking/filter.txt](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/networking/filter.txt).
+    The specification of BPF (both classic and extended versions) can be
+    found within the documentation of the Linux kernel.
     The use of BPF as well as its internals are documented there. Also, this is
     where you can find information about errors thrown by the verifier when
     loading BPF code fails. Can be helpful to troubleshoot obscure error
     messages.
 
--   Also in the kernel tree, there is a document about frequent Questions &
-    Answers on eBPF design in file
-    [linux/Documentation/bpf/bpf_design_QA.txt](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/Documentation/bpf/bpf_design_QA.txt?id=2e39748a4231a893f057567e9b880ab34ea47aef).
-
--   … But the kernel documentation is dense and not especially easy to read. If
-    you look for a simple description of eBPF language, head for
-    [its summarized description](https://github.com/iovisor/bpf-docs/blob/master/eBPF.md)
-    on the IO Visor GitHub repository instead.
+-   [linux/Documentation/bpf/bpf_design_QA.txt](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/bpf/bpf_design_QA.txt).
+    Also in the kernel tree, there is a document about frequently asked questions on eBPF design.
 
 -   By the way, the IO Visor project gathered a lot of resources about BPF.
     Mostly, it is split between
