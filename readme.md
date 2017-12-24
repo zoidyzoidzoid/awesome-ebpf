@@ -645,12 +645,7 @@ find the same code in older versions of the package).
 
 ### BPF utilities
 
-The kernel also ships the sources of three tools (`bpf_asm.c`, `bpf_dbg.c`,
-`bpf_jit_disasm.c`) related to BPF, under the
-[linux/tools/net/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/tools/net)
-or
-[linux/tools/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/bpf)
-directory depending on your version:
+The kernel also ships the sources of three tools (`bpf_asm.c`, `bpf_dbg.c`, `bpf_jit_disasm.c`) related to BPF, under the [linux/tools/net/](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/net?h=v4.14) for versions earlier than 4.15, and  [linux/tools/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/bpf) directory depending on your version:
 
 * `bpf_asm` is a minimal cBPF assembler.
 * `bpf_dbg` is a small debugger for cBPF programs.
