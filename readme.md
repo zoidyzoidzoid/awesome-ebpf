@@ -8,7 +8,6 @@ Thank you to Quentin Monnet and Daniel Borkmann for their original work on [Dive
 
 -   [What is BPF?](#what-is-bpf)
 -   [Resources](#resources)
--   [Documentation](#documentation)
 -   [Tutorials](#tutorials)
 -   [Examples](#examples)
 -   [The Code](#the-code)
@@ -24,7 +23,7 @@ used for already.
 
 ## Resources
 
-### Generic presentations
+### Generic Resources
 
 The documents linked below provide a generic overview of BPF, or of some
 closely related topics. If you are very new to BPF, you can try picking a
@@ -32,7 +31,85 @@ couple of presentation among the first ones and reading the ones you like most.
 If you know eBPF already, you probably want to target specific topics instead,
 lower down in the list.
 
-### Generic Presentations About eBPF
+### Generic Resources About eBPF
+
+-   The specification of BPF (both classic and extended versions) can be
+    found within the documentation of the Linux kernel, and in particular in file
+    [linux/Documentation/networking/filter.txt][filter.txt].
+    The use of BPF as well as its internals are documented there. Also, this is
+    where you can find information about errors thrown by the verifier when
+    loading BPF code fails. Can be helpful to troubleshoot obscure error
+    messages.
+
+-   Also in the kernel tree, there is a document about frequent Questions &
+    Answers on eBPF design in file
+    [linux/Documentation/bpf/bpf_design_QA.txt](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/Documentation/bpf/bpf_design_QA.txt?id=2e39748a4231a893f057567e9b880ab34ea47aef).
+
+-   … But the kernel documentation is dense and not especially easy to read. If
+    you look for a simple description of eBPF language, head for
+    [its summarized description](https://github.com/iovisor/bpf-docs/blob/master/eBPF.md)
+    on the IO Visor GitHub repository instead.
+
+-   By the way, the IO Visor project gathered a lot of resources about BPF.
+    Mostly, it is split between
+    [the documentation directory](https://github.com/iovisor/bcc/tree/master/docs)
+    of its bcc repository, and the whole content of
+    [the bpf-docs repository](https://github.com/iovisor/bpf-docs/), both on
+    GitHub. Note the existence of this excellent
+    [BPF reference guide][refguide]
+    containing a detailed description of BPF C and bcc Python helpers.
+
+-   To hack with BPF, there are some essential Linux manual pages. The first
+    one is
+    [the `bpf(2)` man page](http://man7.org/linux/man-pages/man2/bpf.2.html)
+    about the `bpf()` system call, which is used to manage BPF programs and
+    maps from userspace. It also contains a description of BPF advanced features
+    (program types, maps and so on). The second one is mostly addressed to people
+    wanting to attach BPF programs to tc interface: it is [the `tc-bpf(8)` man
+    page](http://man7.org/linux/man-pages/man8/tc-bpf.8.html), which is a
+    reference for using BPF with tc, and includes some example commands and
+    samples of code.
+
+-   Jesper Dangaard Brouer initiated an attempt to update eBPF Linux
+    documentation, including the different kinds of maps.
+    [He has a draft](https://prototype-kernel.readthedocs.io/en/latest/bpf/index.html)
+    to which contributions are welcome. Once ready, this document should be
+    merged into the man pages and into kernel documentation.
+
+-   The Cilium project also has an excellent [BPF and XDP Reference
+    Guide](http://docs.cilium.io/en/latest/bpf/), written by core eBPF
+    developers, that should prove immensely useful to any eBPF developer.
+
+-   David Miller has sent several enlightening emails about eBPF/XDP internals on
+    the [xdp-newbies](http://vger.kernel.org/vger-lists.html#xdp-newbies) mailing
+    list. I could not find a link that gathers them at a single place, so here is
+    a list:
+
+    -   [bpf.h and you…](https://www.spinics.net/lists/xdp-newbies/msg00179.html)
+    -   [Contextually speaking…](https://www.spinics.net/lists/xdp-newbies/msg00181.html)
+    -   [BPF Verifier Overview](https://www.spinics.net/lists/xdp-newbies/msg00185.html)
+
+    The last one is possibly the best existing summary about the verifier at this
+    date.
+
+-   Ferris Ellis started
+    [a blog post series about eBPF](https://ferrisellis.com/tags/ebpf/).
+    As I write this paragraph, the first article is out, with some historical
+    background and future expectations for eBPF. Next posts should be more
+    technical, and look promising.
+
+-   [A list of BPF features per kernel version][kernfeatures] is available in
+    bcc repository. Useful is you want to know the minimal kernel version that is
+    required to run a given feature. I contributed and added the links to the
+    commits that introduced each feature, so you can also easily access the
+    commit logs from there.
+
+[filter.txt]: https://www.kernel.org/doc/Documentation/networking/filter.txt
+
+[refguide]: https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md
+
+[kernfeatures]: https://github.com/iovisor/bcc/blob/master/docs/kernel-versions.md
+
 
 -   [Making the Kernel’s Networking Data Path Programmable with BPF and XDP](http://schd.ws/hosted_files/ossna2017/da/BPFandXDP.pdf)
     (Daniel Borkmann, OSSNA17, Los Angeles, September 2017):<br>
@@ -67,7 +144,7 @@ lower down in the list.
 -   [Extending extended BPF](https://lwn.net/Articles/603983/)
     (Jonathan Corbet, July 2014)
 
-### BPF internals
+### BPF Internals
 
 -   Daniel Borkmann has been doing an amazing work to present the internals of eBPF, in particular about its use with tc, through several talks and papers.
 
@@ -96,7 +173,7 @@ The [IO Visor blog](https://www.iovisor.org/resources/blog) has some
 interesting technical articles about BPF. Some of them contain a bit of
 marketing talks.
 
-### Kernel tracing
+### Kernel Tracing
 
 -   [Meet-cute between eBPF and Kernel Tracing](http://www.slideshare.net/vh21/meet-cutebetweenebpfandtracing)
     (Viller Hsiao, July 2016):<br>
@@ -122,7 +199,7 @@ Introducing BPF, but also presenting generic concepts of Linux networking:
 -   [Kernel Networking Walkthrough](http://www.slideshare.net/ThomasGraf5/linuxcon-2015-linux-kernel-networking-walkthrough)
     (Thomas Graf, LinuxCon, Seattle, August 2015)
 
-### Hardware offload
+### Hardware Offload
 
 -   [eBPF/XDP hardware offload to SmartNICs](http://netdevconf.org/1.2/session.html?jakub-kicinski)
     (Jakub Kicinski and Nic Viljoen, netdev 1.2, Tokyo, October 2016):<br>
@@ -154,7 +231,56 @@ Introducing BPF, but also presenting generic concepts of Linux networking:
 
 -   [Libpcap filters syntax](http://biot.com/capstats/bpf.html)
 
+### About tc
+
+When using BPF for networking purposes in conjunction with tc, the Linux tool
+for traffic control, one may wish to gather information about tc's
+generic functioning. Here are a couple of resources about it.
+
+-   It is difficult to find simple tutorials about QoS on Linux. The two
+    links I have are long and quite dense, but if you can find the time to read
+    it you will learn nearly everything there is to know about tc (nothing about
+    BPF, though). There they are:
+    [_Traffic Control HOWTO_ (Martin A. Brown, 2006)](http://linux-ip.net/articles/Traffic-Control-HOWTO/),
+    and the
+    [_Linux Advanced Routing & Traffic Control HOWTO_ (“LARTC”) (Bert Hubert & al., 2002)](http://lartc.org/lartc.html).
+
+-   tc manual pages may not be up-to-date on your system, since several of
+    them have been added lately. If you cannot find the documentation for a
+    particular queuing discipline (qdisc), class or filter, it may be worth
+    checking the latest
+    [manual pages for tc components](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/man/man8).
+
+-   Some additional material can be found within the files of iproute2 package
+    itself: the package contains [some documentation](https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git/tree/doc?h=v4.13.0),
+    including some files that helped me understand better
+    [the functioning of tc's actions](https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git/tree/doc/actions?h=v4.13.0).<br />
+    Edit: While still available from the Git history, these files have been
+    deleted from iproute2 in October 2017.
+
+-   Not exactly documentation: there was
+    [a workshop about several tc features](http://netdevconf.org/1.2/session.html?jamal-tc-workshop)
+    (including filtering, BPF, tc offload, …) organized by Jamal Hadi Salim
+    during the netdev 1.2 conference (October 2016).
+
+-   Bonus information—If you use `tc` a lot, here are some good news: I [wrote a
+    bash completion
+    function](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/commit/bash-completion/tc?id=27d44f3a8a4708bcc99995a4d9b6fe6f81e3e15b)
+    for this tool, and it should be shipped with package iproute2 coming with
+    kernel version 4.6 and higher!
+
 ### About XDP
+
+-   Some
+    [work-in-progress documentation (including specifications)](https://prototype-kernel.readthedocs.io/en/latest/networking/XDP/index.html)
+    for XDP started by Jesper Dangaard Brouer, but meant to be a collaborative
+    work. Under progress (September 2016): you should expect it to change, and
+    maybe to be moved at some point (Jesper
+    [called for contribution](https://marc.info/?l=linux-netdev&m=147436253625672),
+    if you feel like improving it).
+
+-   The [BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/) from
+    Cilium project… Well, the name says it all.
 
 -   [XDP overview](https://www.iovisor.org/technology/xdp) on the IO Visor
     website.
@@ -217,7 +343,19 @@ Introducing BPF, but also presenting generic concepts of Linux networking:
     DDoS protection, talking about packet processing in the kernel, kernel
     bypass, XDP and eBPF.
 
-### About other components related or based on eBPF
+### About P4 and BPF
+
+[P4](http://p4.org/) is a language used to specify the behavior of a switch. It
+can be compiled for a number of hardware or software targets. As you may have
+guessed, one of these targets is BPF… The support is only partial: some P4
+features cannot be translated towards BPF, and in a similar way there are
+things that BPF can do but that would not be possible to express with P4.
+Anyway, the documentation related to P4 use with BPF
+[used to be hidden in bcc repository](https://github.com/iovisor/bcc/tree/master/src/cc/frontends/p4).
+This changed with P4_16 version, the p4c reference compiler including
+[a backend for eBPF](https://github.com/p4lang/p4c/blob/master/backends/ebpf/README.md).
+
+### About Other Components Related or Based on eBPF
 
 -   [P4 on the Edge](https://schd.ws/hosted_files/2016p4workshop/1d/Intel%20Fastabend-P4%20on%20the%20Edge.pdf)
     (John Fastabend, May 2016):<br />
@@ -225,7 +363,7 @@ Introducing BPF, but also presenting generic concepts of Linux networking:
     with BPF to create high-performance programmable switches.
 
 -   If you like audio presentations, there is an associated
-    [OvS Orbit episode (#11), called _P4 on the Edge_](https://ovsorbit.benpfaff.org/#e11),
+    [OvS Orbit episode (#11), called _P4 on the Edge_](https://ovsorbit.org/#e11),
     dating from August 2016. OvS Orbit are interviews realized by Ben Pfaff, who
     is one of the core maintainers of Open vSwitch. In this case, John Fastabend
     is interviewed.
@@ -323,155 +461,6 @@ Introducing BPF, but also presenting generic concepts of Linux networking:
 -   If you read my previous article, you might be interested in this talk I gave
     about [implementing the OpenState interface with eBPF](https://fosdem.org/2017/schedule/event/stateful_ebpf/),
     for stateful packet processing, at fosdem17.
-
-## Documentation
-
-Once you managed to get a broad idea of what BPF is, you can put aside generic
-presentations and start diving into the documentation. Below are the most
-complete documents about BPF specifications and functioning. Pick the one you
-need and read them carefully!
-
-### About BPF
-
--   The specification of BPF (both classic and extended versions) can be
-    found within the documentation of the Linux kernel, and in particular in file
-    [linux/Documentation/networking/filter.txt][filter.txt].
-    The use of BPF as well as its internals are documented there. Also, this is
-    where you can find information about errors thrown by the verifier when
-    loading BPF code fails. Can be helpful to troubleshoot obscure error
-    messages.
-
--   Also in the kernel tree, there is a document about frequent Questions &
-    Answers on eBPF design in file
-    [linux/Documentation/bpf/bpf_design_QA.txt](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/Documentation/bpf/bpf_design_QA.txt?id=2e39748a4231a893f057567e9b880ab34ea47aef).
-
--   … But the kernel documentation is dense and not especially easy to read. If
-    you look for a simple description of eBPF language, head for
-    [its summarized description](https://github.com/iovisor/bpf-docs/blob/master/eBPF.md)
-    on the IO Visor GitHub repository instead.
-
--   By the way, the IO Visor project gathered a lot of resources about BPF.
-    Mostly, it is split between
-    [the documentation directory](https://github.com/iovisor/bcc/tree/master/docs)
-    of its bcc repository, and the whole content of
-    [the bpf-docs repository](https://github.com/iovisor/bpf-docs/), both on
-    GitHub. Note the existence of this excellent
-    [BPF reference guide][refguide]
-    containing a detailed description of BPF C and bcc Python helpers.
-
--   To hack with BPF, there are some essential Linux manual pages. The first
-    one is
-    [the `bpf(2)` man page](http://man7.org/linux/man-pages/man2/bpf.2.html)
-    about the `bpf()` system call, which is used to manage BPF programs and
-    maps from userspace. It also contains a description of BPF advanced features
-    (program types, maps and so on). The second one is mostly addressed to people
-    wanting to attach BPF programs to tc interface: it is [the `tc-bpf(8)` man
-    page](http://man7.org/linux/man-pages/man8/tc-bpf.8.html), which is a
-    reference for using BPF with tc, and includes some example commands and
-    samples of code.
-
--   Jesper Dangaard Brouer initiated an attempt to update eBPF Linux
-    documentation, including the different kinds of maps.
-    [He has a draft](https://prototype-kernel.readthedocs.io/en/latest/bpf/index.html)
-    to which contributions are welcome. Once ready, this document should be
-    merged into the man pages and into kernel documentation.
-
--   The Cilium project also has an excellent [BPF and XDP Reference
-    Guide](http://docs.cilium.io/en/latest/bpf/), written by core eBPF
-    developers, that should prove immensely useful to any eBPF developer.
-
--   David Miller has sent several enlightening emails about eBPF/XDP internals on
-    the [xdp-newbies](http://vger.kernel.org/vger-lists.html#xdp-newbies) mailing
-    list. I could not find a link that gathers them at a single place, so here is
-    a list:
-
-    -   [bpf.h and you…](https://www.spinics.net/lists/xdp-newbies/msg00179.html)
-    -   [Contextually speaking…](https://www.spinics.net/lists/xdp-newbies/msg00181.html)
-    -   [BPF Verifier Overview](https://www.spinics.net/lists/xdp-newbies/msg00185.html)
-
-    The last one is possibly the best existing summary about the verifier at this
-    date.
-
--   Ferris Ellis started
-    [a blog post series about eBPF](https://ferrisellis.com/tags/ebpf/).
-    As I write this paragraph, the first article is out, with some historical
-    background and future expectations for eBPF. Next posts should be more
-    technical, and look promising.
-
--   [A list of BPF features per kernel version][kernfeatures] is available in
-    bcc repository. Useful is you want to know the minimal kernel version that is
-    required to run a given feature. I contributed and added the links to the
-    commits that introduced each feature, so you can also easily access the
-    commit logs from there.
-
-[filter.txt]: https://www.kernel.org/doc/Documentation/networking/filter.txt
-
-[refguide]: https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md
-
-[kernfeatures]: https://github.com/iovisor/bcc/blob/master/docs/kernel-versions.md
-
-### About tc
-
-When using BPF for networking purposes in conjunction with tc, the Linux tool
-for traffic control, one may wish to gather information about tc's
-generic functioning. Here are a couple of resources about it.
-
--   It is difficult to find simple tutorials about QoS on Linux. The two
-    links I have are long and quite dense, but if you can find the time to read
-    it you will learn nearly everything there is to know about tc (nothing about
-    BPF, though). There they are:
-    [_Traffic Control HOWTO_ (Martin A. Brown, 2006)](http://linux-ip.net/articles/Traffic-Control-HOWTO/),
-    and the
-    [_Linux Advanced Routing & Traffic Control HOWTO_ (“LARTC”) (Bert Hubert & al., 2002)](http://lartc.org/lartc.html).
-
--   tc manual pages may not be up-to-date on your system, since several of
-    them have been added lately. If you cannot find the documentation for a
-    particular queuing discipline (qdisc), class or filter, it may be worth
-    checking the latest
-    [manual pages for tc components](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/man/man8).
-
--   Some additional material can be found within the files of iproute2 package
-    itself: the package contains [some documentation](https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git/tree/doc?h=v4.13.0),
-    including some files that helped me understand better
-    [the functioning of tc's actions](https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git/tree/doc/actions?h=v4.13.0).<br />
-    Edit: While still available from the Git history, these files have been
-    deleted from iproute2 in October 2017.
-
--   Not exactly documentation: there was
-    [a workshop about several tc features](http://netdevconf.org/1.2/session.html?jamal-tc-workshop)
-    (including filtering, BPF, tc offload, …) organized by Jamal Hadi Salim
-    during the netdev 1.2 conference (October 2016).
-
--   Bonus information—If you use `tc` a lot, here are some good news: I [wrote a
-    bash completion
-    function](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/commit/bash-completion/tc?id=27d44f3a8a4708bcc99995a4d9b6fe6f81e3e15b)
-    for this tool, and it should be shipped with package iproute2 coming with
-    kernel version 4.6 and higher!
-
-### About XDP
-
--   Some
-    [work-in-progress documentation (including specifications)](https://prototype-kernel.readthedocs.io/en/latest/networking/XDP/index.html)
-    for XDP started by Jesper Dangaard Brouer, but meant to be a collaborative
-    work. Under progress (September 2016): you should expect it to change, and
-    maybe to be moved at some point (Jesper
-    [called for contribution](https://marc.info/?l=linux-netdev&m=147436253625672),
-    if you feel like improving it).
-
--   The [BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/) from
-    Cilium project… Well, the name says it all.
-
-### About P4 and BPF
-
-[P4](http://p4.org/) is a language used to specify the behavior of a switch. It
-can be compiled for a number of hardware or software targets. As you may have
-guessed, one of these targets is BPF… The support is only partial: some P4
-features cannot be translated towards BPF, and in a similar way there are
-things that BPF can do but that would not be possible to express with P4.
-Anyway, the documentation related to P4 use with BPF
-[used to be hidden in bcc repository](https://github.com/iovisor/bcc/tree/master/src/cc/frontends/p4).
-This changed with P4_16 version, the p4c reference compiler including
-[a backend for eBPF](https://github.com/p4lang/p4c/blob/master/backends/ebpf/README.md).
 
 ## Tutorials
 
