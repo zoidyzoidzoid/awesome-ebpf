@@ -25,9 +25,9 @@ used for already.
 
 ## Resources
 
-### Generic presentations
+### General presentations
 
-The documents linked below provide a generic overview of BPF, or of some
+The documents linked below provide a general overview of BPF, or of some
 closely related topics. If you are very new to BPF, you can try picking a
 couple of presentation among the first ones and reading the ones you like most.
 If you know eBPF already, you probably want to target specific topics instead,
