@@ -225,7 +225,7 @@ Introducing BPF, but also presenting **generic concepts of Linux networking**:
   is one of the core maintainers of Open vSwitch. In this case, John Fastabend
   is interviewed.
 
-* [_P4, EBPF and Linux TC Offload_](http://open-nfp.org/media/pdfs/Open_NFP_P4_EBPF_Linux_TC_Offload_FINAL.pdf)
+* [_P4, EBPF and Linux TC Offload_](https://open-nfp.org/documents/12/Open-NFP_eBPF-Offload-Starting-Guide_tqigvIR.pdf)
   (Dinan Gunawardena and Jakub Kicinski, August 2016):<br />
   Another presentation on **P4**, with some elements related to eBPF hardware
   offload on Netronome's **NFP** (Network Flow Processor) architecture.
