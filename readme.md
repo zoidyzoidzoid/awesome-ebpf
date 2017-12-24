@@ -46,7 +46,7 @@ lower down in the list.
     (Brendan Gregg, January 2017):<br />
     Mostly about the tracing use cases.
 
--   [_Linux BPF Superpowers_](http://fr.slideshare.net/brendangregg/linux-bpf-superpowers)
+-   [_Linux BPF Superpowers_](http://www.slideshare.net/brendangregg/linux-bpf-superpowers)
     (Brendan Gregg, March 2016):<br />
     With a first part on the use of **flame graphs**.
 
