@@ -171,44 +171,6 @@ lower down in the list.
 
 -   [Libpcap filters syntax](http://biot.com/capstats/bpf.html).
 
-### About tc
-
-When using BPF for networking purposes in conjunction with tc, the Linux tool
-for traffic control, one may wish to gather information about tc's
-generic functioning. Here are a couple of resources about it.
-
--   It is difficult to find simple tutorials about QoS on Linux. The two
-    links I have are long and quite dense, but if you can find the time to read
-    it you will learn nearly everything there is to know about tc (nothing about
-    BPF, though). There they are:
-    [_Traffic Control HOWTO_ (Martin A. Brown, 2006)](http://linux-ip.net/articles/Traffic-Control-HOWTO/),
-    and the
-    [_Linux Advanced Routing & Traffic Control HOWTO_ (“LARTC”) (Bert Hubert & al., 2002)](http://lartc.org/lartc.html).
-
--   tc manual pages may not be up-to-date on your system, since several of
-    them have been added lately. If you cannot find the documentation for a
-    particular queuing discipline (qdisc), class or filter, it may be worth
-    checking the latest
-    [manual pages for tc components](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/man/man8).
-
--   Some additional material can be found within the files of iproute2 package
-    itself: the package contains [some documentation](https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git/tree/doc?h=v4.13.0),
-    including some files that helped me understand better
-    [the functioning of tc's actions](https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git/tree/doc/actions?h=v4.13.0).<br />
-    Edit: While still available from the Git history, these files have been
-    deleted from iproute2 in October 2017.
-
--   Not exactly documentation: there was
-    [a workshop about several tc features](http://netdevconf.org/1.2/session.html?jamal-tc-workshop)
-    (including filtering, BPF, tc offload, …) organized by Jamal Hadi Salim
-    during the netdev 1.2 conference (October 2016).
-
--   Bonus information—If you use `tc` a lot, here are some good news: I [wrote a
-    bash completion
-    function](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/commit/bash-completion/tc?id=27d44f3a8a4708bcc99995a4d9b6fe6f81e3e15b)
-    for this tool, and it should be shipped with package iproute2 coming with
-    kernel version 4.6 and higher!
-
 ### About XDP
 
 -   Some
