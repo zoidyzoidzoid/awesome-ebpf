@@ -121,6 +121,10 @@ lower down in the list.
 
 -   [IO Visor blog](https://www.iovisor.org/resources/blog).
 
+-   [Linux Networking Explained](http://www.slideshare.net/ThomasGraf5/linux-networking-explained)
+    (Thomas Graf, LinuxCon, Toronto, August 2016) Linux networking internals,
+    with a part about eBPF.
+
 ### Kernel Tracing
 
 -   [Meet-cute between eBPF and Kernel Tracing](http://www.slideshare.net/vh21/meet-cutebetweenebpfandtracing)
@@ -134,14 +138,6 @@ lower down in the list.
 
 -   Brendan Gregg's blog, and in particular [_Linux BPF Superpowers_](http://www.brendangregg.com/blog/2016-03-05/linux-bpf-superpowers.html)
     article.
-
-### eBPF and Linux Networking
-
--   [Linux Networking Explained](http://www.slideshare.net/ThomasGraf5/linux-networking-explained)
-    (Thomas Graf, LinuxCon, Toronto, August 2016)
-
--   [Kernel Networking Walkthrough](http://www.slideshare.net/ThomasGraf5/linuxcon-2015-linux-kernel-networking-walkthrough)
-    (Thomas Graf, LinuxCon, Seattle, August 2015)
 
 ### Hardware Offload
 
@@ -159,11 +155,11 @@ lower down in the list.
 
 -   [The FreeBSD manual page about BPF](http://www.gsp.com/cgi-bin/man.cgi?topic=bpf).
 
--   [Linux’ packet mmap(2), BPF, and Netsniff-NG](http://borkmann.ch/talks/2013_devconf.pdf).
-    (Daniel Borkmann, 2013)
+-   [Linux’ packet mmap(2), BPF, and Netsniff-NG](http://borkmann.ch/talks/2013_devconf.pdf)
+    (Daniel Borkmann, 2013).
 
--   [tc and cls bpf: lightweight packet classifying with BPF](http://borkmann.ch/talks/2014_devconf.pdf).
-    (Daniel Borkmann, 2013)
+-   [tc and cls bpf: lightweight packet classifying with BPF](http://borkmann.ch/talks/2014_devconf.pdf)
+    (Daniel Borkmann, 2013).
 
 -   [Introducing Cloudflare's BPF Tools](https://blog.cloudflare.com/introducing-the-bpf-tools/)
     (Marek Majkowski, Cloudflare, 2014) Usage of BPF bytecode with the `xt_bpf`
@@ -171,143 +167,136 @@ lower down in the list.
 
 -   [Libpcap filters syntax](http://biot.com/capstats/bpf.html).
 
-### About XDP
+### XDP
 
--   Some
-    [work-in-progress documentation (including specifications)](https://prototype-kernel.readthedocs.io/en/latest/networking/XDP/index.html)
-    for XDP started by Jesper Dangaard Brouer, but meant to be a collaborative
-    work. Under progress (September 2016): you should expect it to change, and
-    maybe to be moved at some point (Jesper
-    [called for contribution](https://marc.info/?l=linux-netdev&m=147436253625672),
-    if you feel like improving it).
+-   [Work-in-progress documentation for XDP](https://prototype-kernel.readthedocs.io/en/latest/networking/XDP/index.html)
+    started by Jesper Dangaard Brouer, meant to be a collaborative work;
+    contributions welcome.
 
--   The [BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/) from
-    Cilium project… Well, the name says it all.
+-   The [BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/)
+    from Cilium project.
 
 -   [XDP overview](https://www.iovisor.org/technology/xdp) on the IO Visor
     website.
 
 -   [eXpress Data Path (XDP)](https://github.com/iovisor/bpf-docs/raw/master/Express_Data_Path.pdf)
-    (Tom Herbert, Alexei Starovoitov, March 2016):<br>
+    (Tom Herbert, Alexei Starovoitov, March 2016)
     The first presentation about XDP.
 
 -   [BoF - What Can BPF Do For You?](https://events.linuxfoundation.org/sites/events/files/slides/iovisor-lc-bof-2016.pdf)
-    (Brenden Blanco, LinuxCon, Toronto, August 2016).<br>
+    (Brenden Blanco, LinuxCon, Toronto, August 2016).
 
 -   [eXpress Data Path](http://www.slideshare.net/IOVisor/express-data-path-linux-meetup-santa-clara-july-2016)
-    (Brenden Blanco, Linux Meetup at Santa Clara, July 2016):<br />
-    Contains some (somewhat marketing?) benchmark results! With a single core:
+    (Brenden Blanco, Linux Meetup at Santa Clara, July 2016) Contains some benchmark results obtained with the mlx4 driver.
 
-    -   ip routing drop: ~3.6 million packets per second (Mpps)
-    -   tc (with clsact qdisc) drop using BPF: ~4.2 Mpps
-    -   XDP drop using BPF: 20 Mpps (&lt;10 % CPU utilization)
-    -   XDP forward (on port on which the packet was received) with rewrite: 10 Mpps
-
-    (Tests performed with the mlx4 driver).
-
--   Jesper Dangaard Brouer has several excellent sets of slides, that are
-    essential to fully understand the internals of XDP.
+-   Jesper Dangaard Brouer has several sets of slides describing the internals
+    of XDP:
 
     -   [XDP − eXpress Data Path, Intro and future use-cases](http://people.netfilter.org/hawk/presentations/xdp2016/xdp_intro_and_use_cases_sep2016.pdf)
-        (September 2016):<br>
+        (September 2016)
         “Linux Kernel’s fight against DPDK”. Future plans (as of this
         writing) for XDP and comparison with DPDK.
     -   [Network Performance Workshop](http://netdevconf.org/1.2/session.html?jesper-performance-workshop)
-        (netdev 1.2, Tokyo, October 2016):<br>
+        (netdev 1.2, Tokyo, October 2016)
         Additional hints about XDP internals and expected evolution.
     -   [XDP – eXpress Data Path, Used for DDoS protection](http://people.netfilter.org/hawk/presentations/OpenSourceDays2017/XDP_DDoS_protecting_osd2017.pdf)
-        (OpenSourceDays, March 2017):<br>
-        Contains details and use cases about XDP, with benchmark results, and
-        code snippets for benchmarking as well as for basic DDoS
-        protection with eBPF/XDP (based on an IP blacklisting scheme).
+        (OpenSourceDays, March 2017)
+        Details and use cases about XDP, with benchmark results, and code
+        snippets for benchmarking as well as for basic DDoS protection with
+        eBPF/XDP (based on an IP blacklisting scheme).
     -   [Memory vs. Networking, Provoking and fixing memory bottlenecks](http://people.netfilter.org/hawk/presentations/MM-summit2017/MM-summit2017-JesperBrouer.pdf)
-        (LSF Memory Management Summit, March 2017):<br />
-        Provides a lot of details about current memory issues faced by XDP
-        developers. Do not start with this one, but if you already know XDP and
-        want to see how it really works on the page allocation side, this is a very
-        helpful resource.
+        (LSF Memory Management Summit, March 2017)
+        Advanced details about current memory issues faced by XDP developers.
     -   [XDP for the Rest of Us](http://netdevconf.org/2.1/session.html?gospodarek)
-        (netdev 2.1, Montreal, April 2017), with Andy Gospodarek:<br />
-        How to get started with eBPF and XDP for normal humans. This presentation
-        was also summarized by Julia Evans on
+        (netdev 2.1, Montreal, April 2017), with Andy Gospodarek.
+        How to get started with eBPF and XDP for normal humans.
+        Also summarized by Julia Evans on
         [her blog](http://jvns.ca/blog/2017/04/07/xdp-bpf-tutorial/).
 
-    (Jesper also created and tries to extend some documentation about eBPF and
-    XDP, see [related section](#about-xdp-1).)
-
 -   [XDP workshop — Introduction, experience, and future development](http://netdevconf.org/1.2/session.html?herbert-xdp-workshop)
-    (Tom Herbert, netdev 1.2, Tokyo, October 2016) — as of this writing, only the
-    video is available, I don't know if the slides will be added.
+    (Tom Herbert, netdev 1.2, Tokyo, October 2016) (Video).
 
 -   [High Speed Packet Filtering on Linux](https://cdn.shopify.com/s/files/1/0177/9886/files/phv2017-gbertin.pdf)
-    (Gilberto Bertin, DEF CON 25, Las Vegas, July 2017) — an excellent
-    introduction to state-of-the-art packet filtering on Linux, oriented towards
-    DDoS protection, talking about packet processing in the kernel, kernel
-    bypass, XDP and eBPF.
+    (Gilberto Bertin, DEF CON 25, Las Vegas, July 2017) About packet filtering
+    on Linux, DDoS protection, packet processing in the kernel, kernel bypass,
+    XDP and eBPF.
 
-### About P4 and BPF
+### cBPF
 
-[P4](http://p4.org/) is a language used to specify the behavior of a switch. It
-can be compiled for a number of hardware or software targets. As you may have
-guessed, one of these targets is BPF… The support is only partial: some P4
-features cannot be translated towards BPF, and in a similar way there are
-things that BPF can do but that would not be possible to express with P4.
-Anyway, the documentation related to P4 use with BPF
-[used to be hidden in bcc repository](https://github.com/iovisor/bcc/tree/master/src/cc/frontends/p4).
-This changed with P4_16 version, the p4c reference compiler including
-[a backend for eBPF](https://github.com/p4lang/p4c/blob/master/backends/ebpf/README.md).
+-   [The BSD Packet Filter: A New Architecture for User-level Packet Capture](http://www.tcpdump.org/papers/bpf-usenix93.pdf)
+    (Steven McCanne and Van Jacobson, 1992)
+    The original paper about (classic) BPF.
 
-### About Other Components Related or Based on eBPF
+-   [The FreeBSD manual page about BPF](http://www.gsp.com/cgi-bin/man.cgi?topic=bpf).
 
--   [P4 on the Edge](https://schd.ws/hosted_files/2016p4workshop/1d/Intel%20Fastabend-P4%20on%20the%20Edge.pdf)
-    (John Fastabend, May 2016):<br />
-    Presents the use of P4, a description language for packet processing,
-    with BPF to create high-performance programmable switches.
+-   [Linux’ packet mmap(2), BPF, and Netsniff-NG](http://borkmann.ch/talks/2013_devconf.pdf)
+    (Daniel Borkmann, 2013).
 
--   If you like audio presentations, there is an associated
-    [OvS Orbit episode (#11), called _P4 on the Edge_](https://ovsorbit.org/#e11),
-    dating from August 2016. OvS Orbit are interviews realized by Ben Pfaff, who
-    is one of the core maintainers of Open vSwitch. In this case, John Fastabend
-    is interviewed.
+-   [tc and cls bpf: lightweight packet classifying with BPF](http://borkmann.ch/talks/2014_devconf.pdf)
+    (Daniel Borkmann, 2013).
 
--   [P4, EBPF and Linux TC Offload](https://open-nfp.org/m/documents/Open_NFP_P4_EBPF_Linux_TC_Offload_FINAL_5JHLETS.pdf)
-    (Dinan Gunawardena and Jakub Kicinski, August 2016):<br />
-    Another presentation on P4, with some elements related to eBPF hardware
-    offload on Netronome's NFP (Network Flow Processor) architecture.
+-   [Introducing Cloudflare's BPF Tools](https://blog.cloudflare.com/introducing-the-bpf-tools/)
+    (Marek Majkowski, Cloudflare, 2014) Usage of BPF bytecode with the `xt_bpf`
+    module for iptables.
 
--   Cilium is a technology initiated by Cisco and relying on BPF and XDP to
-    provide “fast in-kernel networking and security policy enforcement for
-    containers based on eBPF programs generated on the fly”.
-    [The code of this project](https://github.com/cilium/cilium)
-    is available on GitHub. Thomas Graf has been performing a number of
-    presentations of this topic:
+-   [Libpcap filters syntax](http://biot.com/capstats/bpf.html).
+
+### Hardware Offload
+
+-   [eBPF/XDP hardware offload to SmartNICs](http://netdevconf.org/1.2/session.html?jakub-kicinski)
+    (Jakub Kicinski and Nic Viljoen, netdev 1.2, Tokyo, October 2016)
+    Hardware offload for eBPF with TC or XDP (Linux kernel 4.9+), introduced by
+    Netronome.
+
+### Projects based on, or related to eBPF
+
+-   P4 has some interactions with eBPF:
+
+    -   [P4 on the Edge](https://schd.ws/hosted_files/2016p4workshop/1d/Intel%20Fastabend-P4%20on%20the%20Edge.pdf)
+        (John Fastabend, May 2016) P4 with eBPF to create high-performance
+        programmable switches.
+
+    -   [OvS Orbit episode (#11), called _P4 on the Edge_](https://ovsorbit.org/#e11),
+        (August 2016), related to the former item. Audio interview of John
+        Fastabend by Ben Pfaff, one of the core maintainers of Open vSwitch.
+
+    -   [P4, EBPF and Linux TC Offload](https://open-nfp.org/m/documents/Open_NFP_P4_EBPF_Linux_TC_Offload_FINAL_5JHLETS.pdf)
+        (Dinan Gunawardena and Jakub Kicinski, August 2016)
+        P4 with some elements related to eBPF hardware offload on Netronome's
+        NFP (Network Flow Processor) architecture.
+
+    -   [Old documentation for P4 usage with eBPF](https://github.com/iovisor/bcc/tree/master/src/cc/frontends/p4),
+        from bcc repository; deprecated by the P4_16 backend linked below.
+
+    -   [P4_16 backend for eBPF](https://github.com/p4lang/p4c/blob/master/backends/ebpf/README.md).
+
+-   Cilium project ([GitHub repository](https://github.com/cilium/cilium)) is a
+    technology relying on BPF and XDP to provide “fast in-kernel networking and
+    security policy enforcement for containers based on eBPF programs generated
+    on the fly”. Many presentations available (with overlap):
 
     -   [Cilium: Networking & Security for Containers with BPF & XDP](http://www.slideshare.net/ThomasGraf5/clium-container-networking-with-bpf-xdp),
         also featuring a load balancer use case
-        (Linux Plumbers conference, Santa Fe, November 2016)
+        (Thomas Graf, Linux Plumbers conference, Santa Fe, November 2016)
     -   [Cilium: Networking & Security for Containers with BPF & XDP](http://www.slideshare.net/Docker/cilium-bpf-xdp-for-containers-66969823)
-        (Docker Distributed Systems Summit, October 2016 —
+        (Thomas Graf, Docker Distributed Systems Summit, October 2016 —
         [video](https://www.youtube.com/watch?v=TnJF7ht3ZYc&list=PLkA60AVN3hh8oPas3cq2VA9xB7WazcIgs))
     -   [Cilium: Fast IPv6 container Networking with BPF and XDP](http://www.slideshare.net/ThomasGraf5/cilium-fast-ipv6-container-networking-with-bpf-and-xdp)
-        (LinuxCon, Toronto, August 2016)
+        (Thomas Graf, LinuxCon, Toronto, August 2016)
     -   [Cilium: BPF & XDP for containers](https://fosdem.org/2017/schedule/event/cilium/)
-        (fosdem17, Brussels, Belgium, February 2017)
-
-    A good deal of contents is repeated between the different presentations; if
-    in doubt, just pick the most recent one. Daniel Borkmann has also written
-    [a generic introduction to Cilium](https://opensource.googleblog.com/2016/11/cilium-networking-and-security.html)
-    as a guest author on Google Open Source blog.
-
--   There are also podcasts about Cilium: an
-    [OvS Orbit episode (#4)](https://ovsorbit.benpfaff.org/),
-    in which Ben Pfaff interviews Thomas Graf (May 2016), and
-    [another podcast by Ivan Pepelnjak](http://blog.ipspace.net/2016/10/fast-linux-packet-forwarding-with.html),
-    still with Thomas Graf about eBPF, P4, XDP and Cilium (October 2016).
+        (Thomas Graf, fosdem17, Brussels, Belgium, February 2017)
+    -   [OvS Orbit episode (#4)](https://ovsorbit.benpfaff.org/) (May 2016)
+        Interview of Thomas Graf by Ben Pfaff.
+    -   [A generic introduction to Cilium](https://opensource.googleblog.com/2016/11/cilium-networking-and-security.html)
+        (Daniel Borkmann, as a guest author on Google Open Source blog,
+        November 2016).
+    -   [A podcast by Ivan Pepelnjak](http://blog.ipspace.net/2016/10/fast-linux-packet-forwarding-with.html)
+        by Ivan Pepelnjak interviewing Thomas Graf (October 2016) on eBPF, P4,
+        XDP and Cilium.
 
 -   Open vSwitch (OvS), and its related project Open Virtual Network
     (OVN, an open source network virtualization solution) are considering to use
-    eBPF at various level, with several proof-of-concept prototypes already
-    implemented:<br >
+    eBPF at various level:
 
     -   [Offloading OVS Flow Processing using eBPF](http://openvswitch.org/support/ovscon2016/7/1120-tu.pdf)
         (William (Cheng-Chun) Tu, OvS conference, San Jose, November 2016)
@@ -315,54 +304,40 @@ This changed with P4_16 version, the p4c reference compiler including
         (Fulvio Risso, Matteo Bertrone and Mauricio Vasquez Bernal, OvS
         conference, San Jose, November 2016)
 
-    These use cases for eBPF seem to be only at the stage of proposals (nothing
-    merge to OvS main branch) as far as I know, but it will be very interesting
-    to see what comes out of it.
+-   [XDP in practice: integrating XDP in our DDoS mitigation pipeline](http://netdevconf.org/2.1/session.html?bertin)
+    (Gilberto Bertin, netdev 2.1, Montreal, April 2017) Protection against DDoS with XDP at Cloudflare.
 
--   XDP is envisioned to be of great help for protection against Distributed
-    Denial-of-Service (DDoS) attacks. More and more presentations focus on this.
-    For example, the talks from people from Cloudflare
-    ([XDP in practice: integrating XDP in our DDoS mitigation pipeline](http://netdevconf.org/2.1/session.html?bertin))
-    or from Facebook
-    ([Droplet: DDoS countermeasures powered by BPF + XDP](http://netdevconf.org/2.1/session.html?zhou))
-    at the netdev 2.1 conference in Montreal, Canada, in April 2017, present such
-    use cases.
+-   [Droplet: DDoS countermeasures powered by BPF + XDP](http://netdevconf.org/2.1/session.html?zhou)
+    (Huapeng Zhou, Doug Porter, Ryan Tierney, Nikita Shirokov, netdev 2.1,
+    Montreal, April 2017) Protection against DDoS with XDP at Facebook.
 
 -   [CETH for XDP](http://www.slideshare.net/IOVisor/ceth-for-xdp-linux-meetup-santa-clara-july-2016)
-    (Yan Chan and Yunsong Lu, Linux Meetup, Santa Clara, July 2016):<br />
-    CETH stands for Common Ethernet Driver Framework for faster network I/O,
+    (Yan Chan and Yunsong Lu, Linux Meetup, Santa Clara, July 2016)
+    _Common Ethernet Driver Framework_ for faster network I/O,
     a technology initiated by Mellanox.
 
--   [The VALE switch](http://info.iet.unipi.it/~luigi/vale/), another virtual
-    switch that can be used in conjunction with the netmap framework, has [a BPF
-    extension module](https://github.com/YutaroHayakawa/vale-bpf).
+-   [The VALE switch](http://info.iet.unipi.it/~luigi/vale/) has
+    [a BPF extension module](https://github.com/YutaroHayakawa/vale-bpf).
 
 -   Suricata, an open source intrusion detection system,
-    [seems to rely on eBPF components](https://www.stamus-networks.com/2016/09/28/suricata-bypass-feature/)
-    for its “capture bypass” features:<br />
-    [The adventures of a Suricate in eBPF land](http://netdevconf.org/1.2/slides/oct6/10_suricata_ebpf.pdf)
-    (Éric Leblond, netdev 1.2, Tokyo, October 2016)<br />
-    [eBPF and XDP seen from the eyes of a meerkat](https://www.slideshare.net/ennael/kernel-recipes-2017-ebpf-and-xdp-eric-leblond)
-    (Éric Leblond, Kernel Recipes, Paris, September 2017)
+    [relies on eBPF components](https://www.stamus-networks.com/2016/09/28/suricata-bypass-feature/)
+    for its “capture bypass” features:
+
+    -   [The adventures of a Suricate in eBPF land](http://netdevconf.org/1.2/slides/oct6/10_suricata_ebpf.pdf)
+        (Éric Leblond, netdev 1.2, Tokyo, October 2016)
+    -   [eBPF and XDP seen from the eyes of a meerkat](https://www.slideshare.net/ennael/kernel-recipes-2017-ebpf-and-xdp-eric-leblond)
+        (Éric Leblond, Kernel Recipes, Paris, September 2017)
 
 -   [InKeV: In-Kernel Distributed Network Virtualization for DCN](https://github.com/iovisor/bpf-docs/blob/master/university/sigcomm-ccr-InKev-2016.pdf)
-    (Z. Ahmed, M. H. Alizai and A. A. Syed, SIGCOMM, August 2016):<br />
-    InKeV is an eBPF-based datapath architecture for virtual networks,
-    targeting data center networks. It was initiated by PLUMgrid, and claims to
-    achieve better performances than OvS-based OpenStack solutions.
+    (Z. Ahmed, M. H. Alizai and A. A. Syed, SIGCOMM, August 2016)
 
 -   [gobpf - utilizing eBPF from Go](https://fosdem.org/2017/schedule/event/go_bpf/)
-    (Michael Schubert, fosdem17, Brussels, Belgium, February 2017):<br />
+    (Michael Schubert, fosdem17, Brussels, Belgium, February 2017)
     A “library to create, load and use eBPF programs from Go”
 
--   [ply](https://wkz.github.io/ply/) is a small but flexible open source
-    dynamic tracer for Linux, with some features similar to the bcc tools,
-    but with a simpler language inspired by awk and dtrace, written by Tobias
-    Waldekranz.
-
--   If you read my previous article, you might be interested in this talk I gave
-    about [implementing the OpenState interface with eBPF](https://fosdem.org/2017/schedule/event/stateful_ebpf/),
-    for stateful packet processing, at fosdem17.
+-   [ply](https://wkz.github.io/ply/) A small but flexible open source
+    dynamic tracer for Linux, with features similar to the bcc tools,
+    but with a simpler language inspired by awk and dtrace.
 
 ### Other lists of resources regarding eBPF
 
