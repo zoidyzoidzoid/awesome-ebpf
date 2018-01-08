@@ -22,18 +22,11 @@ used for already.
 
 ## Resources
 
-### Generic Resources
+### Generic Documentation and Presentations
 
-The documents linked below provide a generic overview of BPF, or of some
-closely related topics. If you are very new to BPF, you can try picking a
-couple of presentation among the first ones and reading the ones you like most.
-If you know eBPF already, you probably want to target specific topics instead,
-lower down in the list.
-
-### Generic Resources About eBPF
-
--   [IO Visor's _Unofficial eBPF spec_](https://github.com/iovisor/bpf-docs/blob/master/eBPF.md)
-    Summary of eBPF syntax and operation codes.
+If you are new to eBPF, you may want to try the links described as
+“introduction” or ”documentation” in this section (although you might not want
+to start with “kernel documentation”, which is dense).
 
 -   [linux/Documentation/networking/filter.txt](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/networking/filter.txt).
     Kernel documentation: eBPF specification (somewhat outdated; information
@@ -41,6 +34,9 @@ lower down in the list.
 
 -   [linux/Documentation/bpf/bpf_design_QA.txt](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/bpf/bpf_design_QA.txt).
     Kernel documentation: Frequently Asked Questions on eBPF design.
+
+-   [IO Visor's _Unofficial eBPF spec_](https://github.com/iovisor/bpf-docs/blob/master/eBPF.md)
+    Summary of eBPF syntax and operation codes.
 
 -   Manual pages
 
@@ -54,7 +50,8 @@ lower down in the list.
 -   [Jesper Dangaard Brouer's documentation](https://prototype-kernel.readthedocs.io/en/latest/bpf/index.html):
     work in progress, contributions welcome.
 
--   [Cilum's _BPF and XDP Reference Guide_](http://docs.cilium.io/en/latest/bpf/).
+-   [Cilum's _BPF and XDP Reference Guide_](http://docs.cilium.io/en/latest/bpf/)
+    Generic documentation about most features of eBPF.
 
 -   Emails from David Miller to the [xdp-newbies](http://vger.kernel.org/vger-lists.html#xdp-newbies)
     mailing list:
@@ -139,34 +136,6 @@ lower down in the list.
 -   Brendan Gregg's blog, and in particular [_Linux BPF Superpowers_](http://www.brendangregg.com/blog/2016-03-05/linux-bpf-superpowers.html)
     article.
 
-### Hardware Offload
-
--   [eBPF/XDP hardware offload to SmartNICs](http://netdevconf.org/1.2/session.html?jakub-kicinski)
-    (Jakub Kicinski and Nic Viljoen, netdev 1.2, Tokyo, October 2016):<br>
-    eBPF with tc or XDP supports hardware offload, starting with Linux kernel
-    version 4.9 and introduced by Netronome. Here is a presentation about this
-    feature:<br>
-
-### cBPF
-
--   [The BSD Packet Filter: A New Architecture for User-level Packet Capture](http://www.tcpdump.org/papers/bpf-usenix93.pdf)
-    (Steven McCanne and Van Jacobson, 1992)
-    The original paper about (classic) BPF.
-
--   [The FreeBSD manual page about BPF](http://www.gsp.com/cgi-bin/man.cgi?topic=bpf).
-
--   [Linux’ packet mmap(2), BPF, and Netsniff-NG](http://borkmann.ch/talks/2013_devconf.pdf)
-    (Daniel Borkmann, 2013).
-
--   [tc and cls bpf: lightweight packet classifying with BPF](http://borkmann.ch/talks/2014_devconf.pdf)
-    (Daniel Borkmann, 2013).
-
--   [Introducing Cloudflare's BPF Tools](https://blog.cloudflare.com/introducing-the-bpf-tools/)
-    (Marek Majkowski, Cloudflare, 2014) Usage of BPF bytecode with the `xt_bpf`
-    module for iptables.
-
--   [Libpcap filters syntax](http://biot.com/capstats/bpf.html).
-
 ### XDP
 
 -   [Work-in-progress documentation for XDP](https://prototype-kernel.readthedocs.io/en/latest/networking/XDP/index.html)
@@ -247,6 +216,10 @@ lower down in the list.
     (Jakub Kicinski and Nic Viljoen, netdev 1.2, Tokyo, October 2016)
     Hardware offload for eBPF with TC or XDP (Linux kernel 4.9+), introduced by
     Netronome.
+    (Jakub Kicinski and Nic Viljoen, netdev 1.2, Tokyo, October 2016):<br>
+    eBPF with tc or XDP supports hardware offload, starting with Linux kernel
+    version 4.9 and introduced by Netronome. Here is a presentation about this
+    feature:<br>
 
 ### Projects based on, or related to eBPF
 
