@@ -128,12 +128,6 @@ lower down in the list.
     (Brenden Blanco, SCaLE 14x, January 2016):<br>
     Also introduces [IO Visor project](https://www.iovisor.org/)
 
--   [eBPF on the Mainframe](https://events.linuxfoundation.org/sites/events/files/slides/ebpf_on_the_mainframe_lcon_2015.pdf)
-    (Michael Holzheu, LinuxCon, Dublin, October 2015)
-
--   [New (and Exciting!) Developments in Linux Tracing](https://events.linuxfoundation.org/sites/events/files/slides/tracing-linux-ezannoni-linuxcon-ja-2015_0.pdf)
-    (Elena Zannoni, LinuxCon, Japan, 2015)
-
 -   [BPF — in-kernel virtual machine](https://events.linuxfoundation.org/sites/events/files/slides/bpf_collabsummit_2015feb20.pdf)
     (Alexei Starovoitov, February 2015):<br>
     Presentation by the author of eBPF.
