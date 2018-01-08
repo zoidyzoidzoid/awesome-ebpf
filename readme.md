@@ -2,8 +2,6 @@
 
 > A curated list of awesome projects related to eBPF
 
-Thank you to Quentin Monnet and Daniel Borkmann for their original work on [Dive into BPF: A List of Reading Material](https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/) which became the basis for this list.
-
 ## Contents
 
 -   [What is BPF?](#what-is-bpf)
@@ -13,6 +11,7 @@ Thank you to Quentin Monnet and Daniel Borkmann for their original work on [Dive
 -   [The Code](#the-code)
 -   [Playing With BPF and XDP](#playing-with-bpf-and-xdp)
 -   [BPF Development](#bpf-development)
+-   [Acknowledgement](#acknowledgement)
 -   [Contributing To This List](#contribute)
 -   [License](#license)
 
@@ -725,6 +724,10 @@ commits.
     since BPF is at the heart of the project. If you only want to keep informed
     from time to time, there is also an
     [@IOVisor Twitter account](https://twitter.com/IOVisor).
+
+## Acknowledgement
+
+Thank you to Quentin Monnet and Daniel Borkmann for their original work on [Dive into BPF: A List of Reading Material](https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/) which became the basis for this list.
 
 ## Contribute
 
