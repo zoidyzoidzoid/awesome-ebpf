@@ -11,7 +11,7 @@
 -   [Examples](#examples)
 -   [The Code](#the-code)
 -   [Playing With BPF and XDP](#playing-with-bpf-and-xdp)
--   [BPF Development](#bpf-development)
+-   [Development and Community](#development-and-community)
 -   [Acknowledgement](#acknowledgement)
 -   [Contributing To This List](#contribute)
 -   [License](#license)
@@ -512,19 +512,24 @@ commits.
     also test bcc
     [in a Docker container](https://github.com/zlim/bcc-docker).
 
-## BPF Development
+## Development and Community
 
--   The kernel patches always end up
-    [on the netdev mailing list](http://lists.openwall.net/netdev/)
-    (related to the Linux kernel networking stack development): search for “BPF”
-    or “XDP” keywords. Since April 2017, there is also
-    [a mailing list specially dedicated to XDP programming](http://vger.kernel.org/vger-lists.html#xdp-newbies)
-    (both for architecture or for asking for help). Many discussions and debates
-    also occur
-    [on the IO Visor mailing list](http://lists.iovisor.org/pipermail/iovisor-dev/),
-    since BPF is at the heart of the project. If you only want to keep informed
-    from time to time, there is also an
-    [@IOVisor Twitter account](https://twitter.com/IOVisor).
+-   [The bpf-next tree](https://git.kernel.org/pub/scm/linux/kernel/git/bpf/bpf-next.git/) -
+    BPF patches land in this tree. It is regularly merged into
+    [net-next](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git),
+    which is itself merged for each release to Linus' tree.
+-   [Kernel documentation](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/Documentation/bpf/bpf_devel_QA.txt)
+    about contributions to BPF.
+-   [The netdev mailing list](http://lists.openwall.net/netdev/) - Mailing list
+    for Linux kernel networking stack development. All patches are sent there
+    for review and inclusion.
+-   [XDP-newbies](http://vger.kernel.org/vger-lists.html#xdp-newbies) - A
+    mailing list specially dedicated to XDP programming (both for architecture
+    or for asking for help).
+-   [IO Visor mailing list](http://lists.iovisor.org/pipermail/iovisor-dev/) -
+    BPF is at the heart of the project, and is regularly discussed on the
+    mailing list.
+-   [@IOVisor Twitter account](https://twitter.com/IOVisor).
 
 ## Acknowledgement
 
