@@ -179,10 +179,6 @@ to start with “kernel documentation”, which is dense).
     (Jakub Kicinski and Nic Viljoen, netdev 1.2, Tokyo, October 2016)
     Hardware offload for eBPF with TC or XDP (Linux kernel 4.9+), introduced by
     Netronome.
-    (Jakub Kicinski and Nic Viljoen, netdev 1.2, Tokyo, October 2016):<br>
-    eBPF with tc or XDP supports hardware offload, starting with Linux kernel
-    version 4.9 and introduced by Netronome. Here is a presentation about this
-    feature:<br>
 
 ### Projects based on, or related to eBPF
 
