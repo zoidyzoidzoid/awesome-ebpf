@@ -6,6 +6,7 @@
 
 -   [What is BPF?](#what-is-bpf)
 -   [Resources](#resources)
+-   [Projects based on, or related to eBPF](#projects-based-on-or-related-to-ebpf)
 -   [Tutorials](#tutorials)
 -   [Examples](#examples)
 -   [The Code](#the-code)
@@ -180,7 +181,7 @@ to start with “kernel documentation”, which is dense).
     Hardware offload for eBPF with TC or XDP (Linux kernel 4.9+), introduced by
     Netronome.
 
-### Projects based on, or related to eBPF
+## Projects based on, or related to eBPF
 
 -   P4 has some interactions with eBPF:
     -   [P4 on the Edge](https://schd.ws/hosted_files/2016p4workshop/1d/Intel%20Fastabend-P4%20on%20the%20Edge.pdf)
