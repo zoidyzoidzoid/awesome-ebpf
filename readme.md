@@ -12,6 +12,7 @@
 -   [The Code](#the-code)
 -   [Playing With BPF and XDP](#playing-with-bpf-and-xdp)
 -   [Development and Community](#development-and-community)
+-   [Other lists of resources on eBPF](#other-lists-of-resources-on-ebpf)
 -   [Acknowledgement](#acknowledgement)
 -   [Contributing To This List](#contribute)
 -   [License](#license)
@@ -253,12 +254,6 @@ to start with “kernel documentation”, which is dense).
 -   [ply](https://wkz.github.io/ply/) A small but flexible open source
     dynamic tracer for Linux, with features similar to the bcc tools,
     but with a simpler language inspired by awk and dtrace.
-
-### Other lists of resources regarding eBPF
-
--   [IO Visor's bcc documentation](https://github.com/iovisor/bcc/tree/master/docs)
--   [IO Visor's bpf-docs repository](https://github.com/iovisor/bpf-docs/)
--   [Dive into BPF: A List of Reading Material](https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/)
 
 ## Tutorials
 
@@ -530,6 +525,12 @@ commits.
     BPF is at the heart of the project, and is regularly discussed on the
     mailing list.
 -   [@IOVisor Twitter account](https://twitter.com/IOVisor).
+
+## Other lists of resources on eBPF
+
+-   [IO Visor's bcc documentation](https://github.com/iovisor/bcc/tree/master/docs)
+-   [IO Visor's bpf-docs repository](https://github.com/iovisor/bpf-docs/)
+-   [Dive into BPF: A List of Reading Material](https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/)
 
 ## Acknowledgement
 
