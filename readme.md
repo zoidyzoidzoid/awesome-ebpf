@@ -10,7 +10,7 @@
 -   [Tutorials](#tutorials)
 -   [Examples](#examples)
 -   [The Code](#the-code)
--   [Playing With BPF and XDP](#playing-with-bpf-and-xdp)
+-   [Tools and Utilities](#tools-and-utilities)
 -   [Development and Community](#development-and-community)
 -   [Other lists of resources on eBPF](#other-lists-of-resources-on-ebpf)
 -   [Acknowledgement](#acknowledgement)
@@ -299,7 +299,15 @@ directory.
 
 Also do not forget to have a look to the logs related to the (git) commits that
 introduced a particular feature, they may contain some detailed example of the
-feature.
+feature. You can search the logs in many places, such as on
+[git.kernel.org](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git),
+[on GitHub](https://github.com/torvalds/linux), or on your local
+repository if you have cloned it. If you are not familiar with git, try things
+like `git blame <file>` to see what commit introduced a particular line of
+code, then `git show <commit>` to have details (or search by keyword in `git
+log` results, but this may be tedious). See also [the list of eBPF features per
+kernel version][kernfeatures] on bcc repository, that links to relevant
+commits.
 
 ### From package iproute2
 
@@ -346,7 +354,7 @@ should be Vim of course) and to read it. Or you may want to hack into the code
 so as to patch or add features to the machine. So here are a few pointers to
 the relevant files, finding the functions you want is up to you!
 
-### BPF code in the kernel
+### BPF core
 
 -   The file
     [linux/include/linux/bpf.h](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/linux/bpf.h)
@@ -411,101 +419,79 @@ directory. File en_netdev.c receives Netlink commands and calls
 `mlx4_xdp_set()`, which in turns calls for instance `mlx4_en_process_rx_cq()`
 (for the RX side) implemented in file en_rx.c.
 
-### BPF logic in bcc
+## Tools and utilities
 
-One can find the code for the bcc set of tools
-[on the bcc GitHub repository](https://github.com/iovisor/bcc/).
-The Python code, including the `BPF` class, is initiated in file
-[bcc/src/python/bcc/\_\_init\_\_.py](https://github.com/iovisor/bcc/blob/master/src/python/bcc/__init__.py).
-But most of the interesting stuff—to my opinion—such as loading the BPF program
-into the kernel, happens
-[in the libbcc C library](https://github.com/iovisor/bcc/blob/master/src/cc/libbpf.c).
+### bcc
 
-### Code to manage BPF with tc
+-   [bcc](https://github.com/iovisor/bcc/) framework and set of tools - One way
+    to handle BPF programs, in particular for tracing and monitoring. Also
+    includes some utilities that may help inspect maps or programs on the
+    system.
+-   [P4 compiler for BPF targets](https://github.com/iovisor/bcc/tree/master/src/cc/frontends/p4/compiler)
+    for bcc - An alternative to the restricted C.
+-   [Lua front-end](https://github.com/iovisor/bcc/tree/master/src/lua) for
+    bcc - Another alternative to C, and even to most of the Python code used in
+    bcc.
 
-The code related to BPF in tc comes with the iproute2 package, of course.
-Some of it is under the
-[iproute2/tc/](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/tc)
-directory. The files f_bpf.c and m_bpf.c (and e_bpf.c) are used respectively
-to handle BPF filters and actions (and tc `exec` command, whatever this may
-be). File q_clsact.c defines the `clsact` qdisc especially created for BPF.
-But most of the BPF userspace logic is implemented in
-[iproute2/lib/bpf.c](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/lib/bpf.c)
-library, so this is probably where you should head to if you want to mess up
-with BPF and tc (it was moved from file iproute2/tc/tc_bpf.c, where you may
-find the same code in older versions of the package).
+### iproute2
 
-### BPF utilities
+-   [iproute2](https://git.kernel.org/pub/scm/network/iproute2/iproute2.git) -
+    Package containing tools for network management on Linux. In particular, it
+    contains `tc`, used to manage eBPF filters and actions, and `ip`, used to
+    manage XDP programs. Most of the code related to BPF is in lib/bpf.c.
+-   [iproute2-next](https://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git) -
+    The development tree, synchronised with net-next.
 
-The kernel also ships the sources of three tools (`bpf_asm.c`, `bpf_dbg.c`, `bpf_jit_disasm.c`) related to BPF, under the [linux/tools/net/](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/net?h=v4.14) for versions earlier than 4.15, and  [linux/tools/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/bpf) directory depending on your version:
+### LLVM
 
--   `bpf_asm` is a minimal cBPF assembler.
--   `bpf_dbg` is a small debugger for cBPF programs.
--   `bpf_jit_disasm` is generic for both BPF flavors and could be highly useful
-    for JIT debugging.
--   `bpftool` is a generic utility written by Jakub Kicinski, and that can be
-    used to interact with eBPF programs and maps from userspace, for example to
-    show, dump, pin programs, or to show, create, pin, update, delete maps.
+-   [LLVM](https://llvm.org/) package contains several tools used in eBPF
+    workflow. Snapshots of the latest versions for Ubuntu/Debian can be
+    retrieved from [here](http://apt.llvm.org/).
+    -   clang is used to compile C to eBPF object file under the ELF format
+        (clang v3.7.1+). The BPF backend was added with
+        [this commit](https://reviews.llvm.org/D6494).
+    -   llvm-objdump is used to dump the content of an object file in
+        human-readable format, possibly with the initial C source code
+        (llvm-objdump v4.0+).
+    -   llvm-mc is used to compile from LLVM intermediate representation to
+        eBPF object file, so that one can compile from C to eBPF assembly,
+        tinker with assembly, then compile to ELF file.
 
-Read the comments at the top of the source files to get an overview of their
-usage.
+### bpftool and others from the kernel tree
 
-### Other interesting chunks
+-   [bpftool](https://git.kernel.org/pub/scm/linux/kernel/git/bpf/bpf-next.git/tree/tools/bpf/bpftool)
+    and other tools in the kernel tree, under
+    [linux/tools/net/](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/net?h=v4.14)
+    for versions earlier than 4.15, or
+    [linux/tools/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/bpf)
+    after that:
+    -   `bpftool` - A generic utility that can be used to interact with eBPF
+        programs and maps from userspace, for example to show, dump, load,
+        disassemble, pin programs, or to show, create, pin, update, delete
+        maps, or to attach and detach programs to cgroups.
+    -   `bpf_asm` - A minimal cBPF assembler.
+    -   `bpf_dbg` - A small debugger for cBPF programs.
+    -   `bpf_jit_disasm` - A disassembler for both BPF flavors and could be
+        highly useful for JIT debugging.
 
-If you are interested the use of less common languages with BPF, bcc contains
-[a P4 compiler for BPF targets](https://github.com/iovisor/bcc/tree/master/src/cc/frontends/p4/compiler)
-as well as
-[a Lua front-end](https://github.com/iovisor/bcc/tree/master/src/lua) that
-can be used as alternatives to the C subset and (in the case of Lua) to the
-Python tools.
+### User space eBPF
 
-### LLVM backend
+-   [uBPF](https://github.com/iovisor/ubpf/) - Written in C. Contains an
+    interpreter, a JIT compiler for x86_64 architecture, an assembler and a
+    disassembler.
+-   [A generic implementation](https://github.com/YutaroHayakawa/generic-ebpf) -
+    With support for FreeBSD kernel, FreeBSD user space, Linux kernel, Linux
+    user space and MacOSX user space. Used for the [BPF extension module for
+    VALE switch](https://github.com/YutaroHayakawa/vale-bpf).
+-   [rbpf](https://github.com/qmonnet/rbpf) - Written in Rust. Interpreter for
+    Linux, MacOSX and Windows, and JIT-compiler for x86_64 under Linux.
 
-The BPF backend used by clang / LLVM for compiling C into eBPF was added to the
-LLVM sources in
-[this commit](https://reviews.llvm.org/D6494)
-(and can also be accessed on
-[the GitHub mirror](https://github.com/llvm-mirror/llvm/commit/4fe85c75482f9d11c5a1f92a1863ce30afad8d0d)).
+### Testing in virtual environments
 
-### Running in userspace
-
-As far as I know there are at least two eBPF userspace implementations. The
-first one, [uBPF](https://github.com/iovisor/ubpf/), is written in C. It
-contains an interpreter, a JIT compiler for x86_64 architecture, an assembler
-and a disassembler.
-
-The code of uBPF seems to have been reused to produce a
-[generic implementation](https://github.com/YutaroHayakawa/generic-ebpf),
-that claims to support FreeBSD kernel, FreeBSD userspace, Linux kernel,
-Linux userspace and MacOSX userspace. It is used for the [BPF extension module
-for VALE switch](https://github.com/YutaroHayakawa/vale-bpf).
-
-The other userspace implementation is my own work:
-[rbpf](https://github.com/qmonnet/rbpf), based
-on uBPF, but written in Rust. The interpreter and JIT-compiler work (both under
-Linux, only the interpreter for MacOSX and Windows), there may
-be more in the future.
-
-### Commit logs
-
-As stated earlier, do not hesitate to have a look at the commit log that
-introduced a particular BPF feature if you want to have more information about
-it. You can search the logs in many places, such as on
-[git.kernel.org](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git),
-[on GitHub](https://github.com/torvalds/linux), or on your local
-repository if you have cloned it. If you are not familiar with git, try things
-like `git blame <file>` to see what commit introduced a particular line of
-code, then `git show <commit>` to have details (or search by keyword in `git
-log` results, but this may be tedious). See also [the list of eBPF features per
-kernel version][kernfeatures] on bcc repository, that links to relevant
-commits.
-
-## Playing With BPF and XDP
-
--   In case you would like to easily test XDP, there is
-    [a Vagrant setup](https://github.com/iovisor/xdp-vagrant) available. You can
-    also test bcc
-    [in a Docker container](https://github.com/zlim/bcc-docker).
+-   [A Vagrant setup](https://github.com/iovisor/xdp-vagrant) - To easily test
+    XDP. Less useful now that generic XDP (driver-independant, mostly for
+    testing) exists.
+-   [bcc in a Docker container](https://github.com/zlim/bcc-docker).
 
 ## Development and Community
 
