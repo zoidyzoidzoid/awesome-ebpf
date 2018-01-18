@@ -33,7 +33,7 @@ to start with “kernel documentation”, which is dense).
     should still be valid, but not exhaustive).
 -   [linux/Documentation/bpf/bpf_design_QA.txt](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/bpf/bpf_design_QA.txt).
     Kernel documentation: Frequently Asked Questions on eBPF design.
--   [IO Visor's _Unofficial eBPF spec_](https://github.com/iovisor/bpf-docs/blob/master/eBPF.md)
+-   [IO Visor's Unofficial eBPF spec](https://github.com/iovisor/bpf-docs/blob/master/eBPF.md)
     Summary of eBPF syntax and operation codes.
 -   Manual pages
     -   [`bpf(2)` man page](http://man7.org/linux/man-pages/man2/bpf.2.html)
@@ -44,7 +44,7 @@ to start with “kernel documentation”, which is dense).
         code.
 -   [Jesper Dangaard Brouer's documentation](https://prototype-kernel.readthedocs.io/en/latest/bpf/index.html):
     work in progress, contributions welcome.
--   [Cilum's _BPF and XDP Reference Guide_](http://docs.cilium.io/en/latest/bpf/)
+-   [Cilum's BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/)
     Generic documentation about most features of eBPF.
 -   Emails from David Miller to the [xdp-newbies](http://vger.kernel.org/vger-lists.html#xdp-newbies)
     mailing list:
@@ -110,7 +110,7 @@ to start with “kernel documentation”, which is dense).
     (Viller Hsiao, July 2016)
     Systemtap, Kernelshark, trace-cmd, LTTng, perf-tool, ftrace, hist-trigger,
     perf, function tracer, tracepoint, kprobe/uprobe…
--   Brendan Gregg's blog, and in particular [_Linux BPF Superpowers_](http://www.brendangregg.com/blog/2016-03-05/linux-bpf-superpowers.html)
+-   Brendan Gregg's blog, and in particular [Linux BPF Superpowers](http://www.brendangregg.com/blog/2016-03-05/linux-bpf-superpowers.html)
     article.
 
 ### XDP
@@ -190,7 +190,7 @@ to start with “kernel documentation”, which is dense).
     -   [P4 on the Edge](https://schd.ws/hosted_files/2016p4workshop/1d/Intel%20Fastabend-P4%20on%20the%20Edge.pdf)
         (John Fastabend, May 2016) P4 with eBPF to create high-performance
         programmable switches.
-    -   [OvS Orbit episode (#11), called _P4 on the Edge_](https://ovsorbit.org/#e11),
+    -   [OvS Orbit episode (#11), called P4 on the Edge](https://ovsorbit.org/#e11),
         (August 2016), related to the former item. Audio interview of John
         Fastabend by Ben Pfaff, one of the core maintainers of Open vSwitch.
     -   [P4, EBPF and Linux TC Offload](https://open-nfp.org/m/documents/Open_NFP_P4_EBPF_Linux_TC_Offload_FINAL_5JHLETS.pdf)
@@ -237,7 +237,7 @@ to start with “kernel documentation”, which is dense).
     Montreal, April 2017) Protection against DDoS with XDP at Facebook.
 -   [CETH for XDP](http://www.slideshare.net/IOVisor/ceth-for-xdp-linux-meetup-santa-clara-july-2016)
     (Yan Chan and Yunsong Lu, Linux Meetup, Santa Clara, July 2016)
-    _Common Ethernet Driver Framework_ for faster network I/O,
+    Common Ethernet Driver Framework for faster network I/O,
     a technology initiated by Mellanox.
 -   [The VALE switch](http://info.iet.unipi.it/~luigi/vale/) has
     [a BPF extension module](https://github.com/YutaroHayakawa/vale-bpf).
@@ -283,7 +283,7 @@ example of
 for ping requests and replies
 
 Few tutorials exist for network-related eBPF use cases. There are some
-interesting documents, including an _eBPF Offload Starting Guide_, on the
+interesting documents, including an eBPF Offload Starting Guide, on the
 [Open NFP](https://open-nfp.org/dataplanes-ebpf/technical-papers/) platform
 operated by Netronome. Other than these, the talk from Jesper,
 [XDP for the Rest of Us](http://netdevconf.org/2.1/session.html?gospodarek),
