@@ -1,6 +1,8 @@
 # Awesome eBPF [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-> A curated list of awesome projects related to eBPF
+> A curated list of awesome projects related to eBPF.
+
+> Note: eBPF is an exciting piece of technology, and it's ecosystem is constantly evolving. We'd love help from _you_ to keep this awesome list up to date, and improve its signal-to-noise ratio in anyway we can. Please feel free to leave [any feedback](https://github.com/zoidbergwill/awesome-ebpf/issues).
 
 ## Contents
 
