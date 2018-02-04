@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "remark": "^8.0.0",
+    "remark-cli": "^4.0.0",
+    "remark-lint": "^6.0.1",
+    "remark-lint-are-links-valid-alive": "^0.3.0",
+    "remark-preset-lint-recommended": "^3.0.1",
+    "remark-validate-links": "^7.0.0"
+  },
+  "scripts": {
+    "lint-md": "node_modules/.bin/remark readme.md"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended",
+      "remark-validate-links",
+      "remark-lint-are-links-valid-alive"
+    ]
+  }
+}
