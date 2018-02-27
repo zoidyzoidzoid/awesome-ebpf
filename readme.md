@@ -285,60 +285,22 @@ is probably one of the best ways to get started with XDP.
 
 ## Examples
 
-It is always nice to have examples. To see how things really work. But BPF
-program samples are scattered across several projects, so I listed all the ones
-I know of. The examples do not always use the same helpers (for instance, tc
-and bcc both have their own set of helpers to make it easier to write BPF
-programs in C language).
-
-### From the kernel
-
-The kernel contains examples for most types of program: filters to bind to
-sockets or to tc interfaces, event tracing/monitoring, and even XDP. You can
-find these examples under the
-[linux/samples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/samples/bpf)
-directory.
-
-Also do not forget to have a look to the logs related to the (git) commits that
-introduced a particular feature, they may contain some detailed example of the
-feature. You can search the logs in many places, such as on
-[git.kernel.org](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git),
-[on GitHub](https://github.com/torvalds/linux), or on your local
-repository if you have cloned it. If you are not familiar with git, try things
-like `git blame <file>` to see what commit introduced a particular line of
-code, then `git show <commit>` to have details (or search by keyword in `git
-log` results, but this may be tedious). See also [the list of eBPF features per
-kernel version][kernfeatures] on bcc repository, that links to relevant
-commits.
-
-### From package iproute2
-
-The iproute2 package provide several examples as well. They are obviously
-oriented towards network programming, since the programs are to be attached to
-tc ingress or egress interfaces. The examples dwell under the
-[iproute2/examples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/examples/bpf)
-directory.
-
-### From bcc set of tools
-
-Many examples are [provided with bcc](https://github.com/iovisor/bcc/tree/master/examples):
-
--   Some are networking example programs, under the associated directory. They
-    include socket filters, tc filters, and a XDP program.
-
--   The `tracing` directory include a lot of example tracing programs. The
-    tutorials mentioned earlier are based on these. These programs cover a wide
-    range of event monitoring functions, and some of them are
-    production-oriented. Note that on certain Linux distributions (at least for
-    Debian, Ubuntu, Fedora, Arch Linux), these programs have been
-    [packaged](https://github.com/iovisor/bcc/blob/master/INSTALL.md) and can be
-    “easily” installed by typing e.g. `# apt install bcc-tools`, but as of this
-    writing (and except for Arch Linux), this first requires to set up IO Visor's
-    own package repository.
-
--   There are also some examples using Lua as a different BPF back-end (that
-    is, BPF programs are written with Lua instead of a subset of C, allowing to
-    use the same language for front-end and back-end), in the third directory.
+-   [linux/samples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/samples/bpf)
+    in the kernel tree: some sample eBPF programs.
+-   [linux/tools/testing/selftests/bpf](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/testing/selftests/bpf)
+    in the kernel tree: Linux BPF selftests, with many eBPF programs.
+-   [prototype-kernel/kernel/samples/bpf](https://github.com/netoptimizer/prototype-kernel/tree/master/kernel/samples/bpf)
+    from Jesper Dangaard Brouer's prototype-kernel repository contains some
+    additional examples that can be compiled outside of kernel infrastructure.
+-   [iproute2/examples/bpf/](https://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git/tree/examples/bpf)
+    from iproute2 package: some networking programs to attach to the TC
+    interface.
+-   [bcc/examples](https://github.com/iovisor/bcc/tree/master/examples):
+    coming along with the bcc tools, mostly about tracing.
+-   [bcc/tools](https://github.com/iovisor/bcc/tree/master/tools)
+    themselves can be seen as example use cases for BPF programs, mostly for
+    tracing and monitoring. bcc tools have been packaged for some Linux
+    distributions.
 
 ### Manual pages
 
