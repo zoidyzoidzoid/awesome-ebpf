@@ -302,14 +302,6 @@ is probably one of the best ways to get started with XDP.
     tracing and monitoring. bcc tools have been packaged for some Linux
     distributions.
 
-### Manual pages
-
-While bcc is generally the easiest way to inject and run a BPF program in the
-kernel, attaching programs to tc interfaces can also be performed by the `tc`
-tool itself. So if you intend to use BPF with tc, you can find some example
-invocations in the
-[`tc-bpf(8)` manual page](http://man7.org/linux/man-pages/man8/tc-bpf.8.html).
-
 ## The Code
 
 Sometimes, BPF documentation or examples are not enough, and you may have no
