@@ -259,29 +259,23 @@ to start with “kernel documentation”, which is dense).
 
 ## Tutorials
 
-Brendan Gregg has produced excellent tutorials intended for people who want
-to use bcc tools for tracing and monitoring events in the kernel.
-[The first tutorial about using bcc itself](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md)
-comes with eleven steps (as of today) to understand how to use the existing
-tools, while
-[the one intended for Python developers](https://github.com/iovisor/bcc/blob/master/docs/tutorial_bcc_python_developer.md)
-focuses on developing new tools, across seventeen “lessons”.
-
-Sasha Goldshtein also has some
-[Linux Tracing Workshops Materials](https://github.com/goldshtn/linux-tracing-workshop)
-involving the use of several BPF tools for tracing.
-
-Another post by Jean-Tiare Le Bigot provides a detailed (and instructive!)
-example of
-[using perf and eBPF to setup a low-level tracer](https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/)
-for ping requests and replies
-
-Few tutorials exist for network-related eBPF use cases. There are some
-interesting documents, including an eBPF Offload Starting Guide, on the
-[Open NFP](https://open-nfp.org/dataplanes-ebpf/technical-papers/) platform
-operated by Netronome. Other than these, the talk from Jesper,
-[XDP for the Rest of Us](http://netdevconf.org/2.1/session.html?gospodarek),
-is probably one of the best ways to get started with XDP.
+-   [bcc Reference Guide](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md):
+    many incremental steps to start using bcc and eBPF, mostly centered on
+    tracing and monitoring.
+-   [bcc Python Developer Tutorial](https://github.com/iovisor/bcc/blob/master/docs/tutorial_bcc_python_developer.md):
+    also comes with bcc, but targets the Python bits across seventeen “lessons”.
+-   [Linux Tracing Workshops Materials](https://github.com/goldshtn/linux-tracing-workshop)
+    from Sasha Goldshtein: involves the use of several BPF tools for tracing.
+-   [Tracing a packet journey using Linux tracepoints, perf and eBPF](https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/)
+    from Jean-Tiare Le Bigot: troobleshooting ping requests and replies with
+    perf and bcc programs.
+-   [Open NFP platform](https://open-nfp.org/dataplanes-ebpf/technical-papers/)
+    operated by Netronome: some tutorials for network-related eBPF use cases, including an eBPF Offload Starting Guide.
+-   [XDP for the Rest of Us](http://netdevconf.org/2.1/session.html?gospodarek)
+    from Jesper Dangaard Brouer and Andy Gospodarek at Netdev 2.1:
+    first edition of a workshop to get started with XDP.
+-   [XDP for the Rest of Us](https://www.netdevconf.org/2.2/session.html?gospodarek-xdp-workshop)
+    from the same authors, at Netdev 2.2: second edition, with new contents.
 
 ## Examples
 
