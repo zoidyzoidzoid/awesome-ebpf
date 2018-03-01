@@ -259,167 +259,83 @@ to start with “kernel documentation”, which is dense).
 
 ## Tutorials
 
-Brendan Gregg has produced excellent tutorials intended for people who want
-to use bcc tools for tracing and monitoring events in the kernel.
-[The first tutorial about using bcc itself](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md)
-comes with eleven steps (as of today) to understand how to use the existing
-tools, while
-[the one intended for Python developers](https://github.com/iovisor/bcc/blob/master/docs/tutorial_bcc_python_developer.md)
-focuses on developing new tools, across seventeen “lessons”.
-
-Sasha Goldshtein also has some
-[Linux Tracing Workshops Materials](https://github.com/goldshtn/linux-tracing-workshop)
-involving the use of several BPF tools for tracing.
-
-Another post by Jean-Tiare Le Bigot provides a detailed (and instructive!)
-example of
-[using perf and eBPF to setup a low-level tracer](https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/)
-for ping requests and replies
-
-Few tutorials exist for network-related eBPF use cases. There are some
-interesting documents, including an eBPF Offload Starting Guide, on the
-[Open NFP](https://open-nfp.org/dataplanes-ebpf/technical-papers/) platform
-operated by Netronome. Other than these, the talk from Jesper,
-[XDP for the Rest of Us](http://netdevconf.org/2.1/session.html?gospodarek),
-is probably one of the best ways to get started with XDP.
+-   [bcc Reference Guide](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md):
+    many incremental steps to start using bcc and eBPF, mostly centered on
+    tracing and monitoring.
+-   [bcc Python Developer Tutorial](https://github.com/iovisor/bcc/blob/master/docs/tutorial_bcc_python_developer.md):
+    also comes with bcc, but targets the Python bits across seventeen “lessons”.
+-   [Linux Tracing Workshops Materials](https://github.com/goldshtn/linux-tracing-workshop)
+    from Sasha Goldshtein: involves the use of several BPF tools for tracing.
+-   [Tracing a packet journey using Linux tracepoints, perf and eBPF](https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/)
+    from Jean-Tiare Le Bigot: troobleshooting ping requests and replies with
+    perf and bcc programs.
+-   [Open NFP platform](https://open-nfp.org/dataplanes-ebpf/technical-papers/)
+    operated by Netronome: some tutorials for network-related eBPF use cases, including an eBPF Offload Starting Guide.
+-   [XDP for the Rest of Us](http://netdevconf.org/2.1/session.html?gospodarek)
+    from Jesper Dangaard Brouer and Andy Gospodarek at Netdev 2.1:
+    first edition of a workshop to get started with XDP.
+-   [XDP for the Rest of Us](https://www.netdevconf.org/2.2/session.html?gospodarek-xdp-workshop)
+    from the same authors, at Netdev 2.2: second edition, with new contents.
 
 ## Examples
 
-It is always nice to have examples. To see how things really work. But BPF
-program samples are scattered across several projects, so I listed all the ones
-I know of. The examples do not always use the same helpers (for instance, tc
-and bcc both have their own set of helpers to make it easier to write BPF
-programs in C language).
-
-### From the kernel
-
-The kernel contains examples for most types of program: filters to bind to
-sockets or to tc interfaces, event tracing/monitoring, and even XDP. You can
-find these examples under the
-[linux/samples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/samples/bpf)
-directory.
-
-Also do not forget to have a look to the logs related to the (git) commits that
-introduced a particular feature, they may contain some detailed example of the
-feature. You can search the logs in many places, such as on
-[git.kernel.org](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git),
-[on GitHub](https://github.com/torvalds/linux), or on your local
-repository if you have cloned it. If you are not familiar with git, try things
-like `git blame <file>` to see what commit introduced a particular line of
-code, then `git show <commit>` to have details (or search by keyword in `git
-log` results, but this may be tedious). See also [the list of eBPF features per
-kernel version][kernfeatures] on bcc repository, that links to relevant
-commits.
-
-### From package iproute2
-
-The iproute2 package provide several examples as well. They are obviously
-oriented towards network programming, since the programs are to be attached to
-tc ingress or egress interfaces. The examples dwell under the
-[iproute2/examples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/examples/bpf)
-directory.
-
-### From bcc set of tools
-
-Many examples are [provided with bcc](https://github.com/iovisor/bcc/tree/master/examples):
-
--   Some are networking example programs, under the associated directory. They
-    include socket filters, tc filters, and a XDP program.
-
--   The `tracing` directory include a lot of example tracing programs. The
-    tutorials mentioned earlier are based on these. These programs cover a wide
-    range of event monitoring functions, and some of them are
-    production-oriented. Note that on certain Linux distributions (at least for
-    Debian, Ubuntu, Fedora, Arch Linux), these programs have been
-    [packaged](https://github.com/iovisor/bcc/blob/master/INSTALL.md) and can be
-    “easily” installed by typing e.g. `# apt install bcc-tools`, but as of this
-    writing (and except for Arch Linux), this first requires to set up IO Visor's
-    own package repository.
-
--   There are also some examples using Lua as a different BPF back-end (that
-    is, BPF programs are written with Lua instead of a subset of C, allowing to
-    use the same language for front-end and back-end), in the third directory.
-
-### Manual pages
-
-While bcc is generally the easiest way to inject and run a BPF program in the
-kernel, attaching programs to tc interfaces can also be performed by the `tc`
-tool itself. So if you intend to use BPF with tc, you can find some example
-invocations in the
-[`tc-bpf(8)` manual page](http://man7.org/linux/man-pages/man8/tc-bpf.8.html).
+-   [linux/samples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/samples/bpf)
+    in the kernel tree: some sample eBPF programs.
+-   [linux/tools/testing/selftests/bpf](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/testing/selftests/bpf)
+    in the kernel tree: Linux BPF selftests, with many eBPF programs.
+-   [prototype-kernel/kernel/samples/bpf](https://github.com/netoptimizer/prototype-kernel/tree/master/kernel/samples/bpf)
+    from Jesper Dangaard Brouer's prototype-kernel repository contains some
+    additional examples that can be compiled outside of kernel infrastructure.
+-   [iproute2/examples/bpf/](https://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git/tree/examples/bpf)
+    from iproute2 package: some networking programs to attach to the TC
+    interface.
+-   [bcc/examples](https://github.com/iovisor/bcc/tree/master/examples):
+    coming along with the bcc tools, mostly about tracing.
+-   [bcc/tools](https://github.com/iovisor/bcc/tree/master/tools)
+    themselves can be seen as example use cases for BPF programs, mostly for
+    tracing and monitoring. bcc tools have been packaged for some Linux
+    distributions.
 
 ## The Code
 
-Sometimes, BPF documentation or examples are not enough, and you may have no
-other solution that to display the code in your favorite text editor (which
-should be Vim of course) and to read it. Or you may want to hack into the code
-so as to patch or add features to the machine. So here are a few pointers to
-the relevant files, finding the functions you want is up to you!
-
-### BPF core
-
--   The file
-    [linux/include/linux/bpf.h](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/linux/bpf.h)
-    and its counterpart
-    [linux/include/uapi/bpf.h](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/uapi/linux/bpf.h)
-    contain definitions related to eBPF, to be used respectively in the
-    kernel and to interface with userspace programs.
-
--   On the same pattern, files
-    [linux/include/linux/filter.h](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/linux/filter.h)
-    and
-    [linux/include/uapi/filter.h](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/uapi/linux/filter.h)
-    contain information used to run the BPF programs.
-
--   The main pieces of code related to BPF are under
-    [linux/kernel/bpf/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/bpf)
-    directory. The different operations permitted by the system call, such as
-    program loading or map management, are implemented in file `syscall.c`, while
-    `core.c` contains the interpreter. The other files have self-explanatory
-    names: `verifier.c` contains the verifier (no kidding), `arraymap.c` the
-    code used to interact with maps of type array, and so on.
-
--   The helpers, as well as several functions related to networking (with tc,
-    XDP…) and available to the user, are implemented in
-    [linux/net/core/filter.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/core/filter.c).
-    It also contains the code to migrate cBPF bytecode to eBPF (since all cBPF
-    programs are now translated to eBPF in the kernel before being run).
-
-
+-   [linux/include/linux/bpf.h](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/linux/bpf.h),
+    [linux/include/uapi/bpf.h](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/uapi/linux/bpf.h):
+    definitions related to eBPF, to be used respectively in the kernel and to
+    interface with userspace programs.
+-   [linux/include/linux/filter.h](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/linux/filter.h),
+    [linux/include/uapi/filter.h](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/uapi/linux/filter.h):
+    information used to run the BPF programs themselves.
+-   [linux/kernel/bpf/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/bpf):
+    This directory contains most of BPF-related code. In particular, those
+    files are worth of interest:
+    -   `syscall.c`: different operations permitted by the system call, such as
+        program loading or map management.
+    -   `core.c`: BPF interpreter.
+    -   `verifier.c`: BPF verifier.
+-   [linux/net/core/filter.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/core/filter.c):
+    functions and eBPF helpers related to networking (TC, XDP etc.); also
+    contains the code to migrate cBPF bytecode to eBPF (all cBPF programs are
+    translated to eBPF in recent kernels).
+-   [linux/kernel/trace/bpf_trace.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/trace/bpf_trace.c).
+    functions and eBPF helpers related to tracing and monitoring (kprobes,
+    tracepoints, etc.).
 -   The JIT compilers are under the directory of their respective
     architectures, such as file
     [linux/arch/x86/net/bpf_jit_comp.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/arch/x86/net/bpf_jit_comp.c)
-    for x86.
-
--   You will find the code related to the BPF components of tc in the
-    [linux/net/sched/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/sched)
-    directory, and in particular in files `act_bpf.c` (action) and `cls_bpf.c`
-    (filter).
-
--   I have not hacked with event tracing in BPF, so I do not really know
-    about the hooks for such programs. There is some stuff in
-    [linux/kernel/trace/bpf_trace.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/trace/bpf_trace.c).
-    If you are interested in this and want to know more, you may dig on the side
-    of Brendan Gregg's presentations or blog posts.
-
--   Nor have I used seccomp-BPF. But the code is in
-    [linux/kernel/seccomp.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/seccomp.c),
-    and some example use cases can be found in
-    [linux/tools/testing/selftests/seccomp/seccomp_bpf.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/tools/testing/selftests/seccomp/seccomp_bpf.c).
-
-### XDP hooks code
-
-Once loaded into the in-kernel BPF virtual machine, XDP programs are hooked
-from userspace into the kernel network path thanks to a Netlink command. On
-reception, the function `dev_change_xdp_fd()` in file
-[linux/net/core/dev.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/core/dev.c)
-is called and sets a XDP hook. Such hooks are located in the drivers of
-supported NICs. For example, the mlx4 driver used for some Mellanox hardware
-has hooks implemented in files under the
-[drivers/net/ethernet/mellanox/mlx4/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/drivers/net/ethernet/mellanox/mlx4/)
-directory. File en_netdev.c receives Netlink commands and calls
-`mlx4_xdp_set()`, which in turns calls for instance `mlx4_en_process_rx_cq()`
-(for the RX side) implemented in file en_rx.c.
+    for x86. Exception is made for JIT compilers used for hardware offload,
+    sitting in their drivers, such as
+    [linux/drivers/net/ethernet/netronome/nfp/bpf/jit.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/drivers/net/ethernet/netronome/nfp/bpf/jit.c)
+    for Netronome NFP.
+-   [linux/net/sched/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/sched),
+    and in particular in files `act_bpf.c` (action) and `cls_bpf.c` (filter):
+    code related to BPF actions and filters with TC.
+-   [linux/kernel/seccomp.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/seccomp.c):
+    code related to seccomp.
+-   [linux/net/core/dev.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/core/dev.c)
+    contains the function `dev_change_xdp_fd()` that is called through a
+    Netlink command to hook a XDP program to a device, after is has been loaded
+    into the kernel from user space. This function in turns uses a callback
+    from the relevant driver.
 
 ## Tools and utilities
 
