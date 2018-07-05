@@ -35,7 +35,7 @@ to start with “kernel documentation”, which is dense).
 -   [linux/Documentation/networking/filter.txt](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/networking/filter.txt).
     Kernel documentation: eBPF specification (somewhat outdated; information
     should still be valid, but not exhaustive).
--   [linux/Documentation/bpf/bpf_design_QA.txt](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/bpf/bpf_design_QA.txt).
+-   [linux/Documentation/bpf/bpf_design_QA.txt](https://www.kernel.org/doc/Documentation/bpf/bpf_design_QA.txt).
     Kernel documentation: Frequently Asked Questions on eBPF design.
 -   [IO Visor's Unofficial eBPF spec](https://github.com/iovisor/bpf-docs/blob/master/eBPF.md)
     Summary of eBPF syntax and operation codes.
