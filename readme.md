@@ -417,7 +417,7 @@ to start with “kernel documentation”, which is dense).
     BPF patches land in this tree. It is regularly merged into
     [net-next](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git),
     which is itself merged for each release to Linus' tree.
--   [Kernel documentation](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/Documentation/bpf/bpf_devel_QA.txt)
+-   [Kernel documentation](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/Documentation/bpf/bpf_devel_QA.rst)
     about contributions to BPF.
 -   [The netdev mailing list](http://lists.openwall.net/netdev/) - Mailing list
     for Linux kernel networking stack development. All patches are sent there
