@@ -256,6 +256,8 @@ to start with “kernel documentation”, which is dense).
 -   [ply](https://wkz.github.io/ply/) A small but flexible open source
     dynamic tracer for Linux, with features similar to the bcc tools,
     but with a simpler language inspired by awk and dtrace.
+-   [bpfd](https://github.com/genuinetools/bpfd) Framework for running BPF
+    programs with rules on Linux as a daemon. Container aware.
 
 ## Tutorials
 
