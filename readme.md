@@ -297,6 +297,9 @@ to start with “kernel documentation”, which is dense).
     themselves can be seen as example use cases for BPF programs, mostly for
     tracing and monitoring. bcc tools have been packaged for some Linux
     distributions.
+-   [MPLSinIP sample](https://github.com/fzakaria/eBPF-mpls-encap-decap)
+    a heavily commented sample demonstrating how to encapsulate & decapsulate MPLS within IP.
+    The code is commented for those new to BPF development.
 
 ## The Code
 
