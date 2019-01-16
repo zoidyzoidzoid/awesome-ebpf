@@ -161,6 +161,8 @@ to start with “kernel documentation”, which is dense).
     (Gilberto Bertin, DEF CON 25, Las Vegas, July 2017) About packet filtering
     on Linux, DDoS protection, packet processing in the kernel, kernel bypass,
     XDP and eBPF.
+-   [How to drop 10 million packets per second](https://blog.cloudflare.com/how-to-drop-10-million-packets/)
+    Cloudflare's blog post talking about their move to using XDP for packet filtering.
 
 ### cBPF
 
