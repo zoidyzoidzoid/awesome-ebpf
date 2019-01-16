@@ -258,6 +258,8 @@ to start with “kernel documentation”, which is dense).
     but with a simpler language inspired by awk and dtrace.
 -   [bpfd](https://github.com/genuinetools/bpfd) Framework for running BPF
     programs with rules on Linux as a daemon. Container aware.
+-   [bpftrace](https://github.com/iovisor/bpftrace) High-level tracing language for eBPF, similar to ply and dtrace.
+-   [kubectl-trace](https://github.com/iovisor/kubectl-trace) Kubernetes plugin to schedule bpftrace programs on your kubernetes cluster using kubectl.
 
 ## Tutorials
 
