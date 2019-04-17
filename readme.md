@@ -258,6 +258,8 @@ to start with “kernel documentation”, which is dense).
     but with a simpler language inspired by awk and dtrace.
 -   [bpfd](https://github.com/genuinetools/bpfd) Framework for running BPF
     programs with rules on Linux as a daemon. Container aware.
+-   [eBPF-based content and computation-aware communication for real-time edge computing](https://github.com/saburhb/eBPF-cast) The rarely application
+    about eBPF.
 
 ## Tutorials
 
