@@ -7,16 +7,17 @@
 ## Contents
 
 -   [What is BPF?](#what-is-bpf)
--   [Resources](#resources)
--   [Projects based on, or related to eBPF](#projects-based-on-or-related-to-ebpf)
+-   [Reference Documentation](#reference-documentation)
+-   [Articles and Presentations](#articles-and-presentations)
 -   [Tutorials](#tutorials)
 -   [Examples](#examples)
+-   [eBPF Workflow: Tools and Utilities](#ebpf-workflow-tools-and-utilities)
+-   [Projects Related to eBPF](#projects-related-to-ebpf)
 -   [The Code](#the-code)
--   [Tools and Utilities](#tools-and-utilities)
 -   [Development and Community](#development-and-community)
--   [Other lists of resources on eBPF](#other-lists-of-resources-on-ebpf)
+-   [Other Lists of Resources on eBPF](#other-lists-of-resources-on-ebpf)
 -   [Acknowledgement](#acknowledgement)
--   [Contributing To This List](#contribute)
+-   [Contributing](#contributing)
 -   [License](#license)
 
 ## What is BPF?
@@ -24,40 +25,51 @@
 TODO: Update with concise overview of BPF (cBPF and eBPF), and what it's
 used for already.
 
-## Resources
+## Reference Documentation
 
-### Generic Documentation and Presentations
+### Cilium Guide
 
-If you are new to eBPF, you may want to try the links described as
-“introduction” or ”documentation” in this section (although you might not want
-to start with “kernel documentation”, which is dense).
+-   [Cilum's BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/)
+    Generic documentation about most features of eBPF.
+
+### Kernel Documentation
 
 -   [linux/Documentation/networking/filter.txt](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/networking/filter.txt).
     Kernel documentation: eBPF specification (somewhat outdated; information
     should still be valid, but not exhaustive).
 -   [linux/Documentation/bpf/bpf_design_QA.rst](https://www.kernel.org/doc/Documentation/bpf/bpf_design_QA.rst).
     Kernel documentation: Frequently Asked Questions on eBPF design.
+
+### Manual Pages
+
+-   [`bpf(2)` man page](http://man7.org/linux/man-pages/man2/bpf.2.html) about
+    the `bpf()` system call, used to manage BPF programs and maps from
+    userspace.
+-   [`tc-bpf(8)` man page](http://man7.org/linux/man-pages/man8/tc-bpf.8.html)
+    about using BPF with tc, including example commands and samples of code.
+
+### Other
+
 -   [IO Visor's Unofficial eBPF spec](https://github.com/iovisor/bpf-docs/blob/master/eBPF.md)
     Summary of eBPF syntax and operation codes.
--   Manual pages
-    -   [`bpf(2)` man page](http://man7.org/linux/man-pages/man2/bpf.2.html)
-        about the `bpf()` system call, used to manage BPF programs and maps
-        from userspace.
-    -   [`tc-bpf(8)` man page](http://man7.org/linux/man-pages/man8/tc-bpf.8.html)
-        about using BPF with tc, including example commands and samples of
-        code.
 -   [Jesper Dangaard Brouer's documentation](https://prototype-kernel.readthedocs.io/en/latest/bpf/index.html):
     work in progress, contributions welcome.
--   [Cilum's BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/)
-    Generic documentation about most features of eBPF.
 -   Emails from David Miller to the [xdp-newbies](http://vger.kernel.org/vger-lists.html#xdp-newbies)
     mailing list:
     -   [bpf.h and you…](https://www.spinics.net/lists/xdp-newbies/msg00179.html)
     -   [Contextually speaking…](https://www.spinics.net/lists/xdp-newbies/msg00181.html)
     -   [BPF Verifier Overview](https://www.spinics.net/lists/xdp-newbies/msg00185.html)
--   [A blog post series about eBPF from Ferris Ellis](https://ferrisellis.com/tags/ebpf/).
 -   [List of BPF features per kernel version](https://github.com/iovisor/bcc/blob/master/docs/kernel-versions.md),
     in bcc repository.
+
+## Articles and Presentations
+
+### Generic eBPF presentations
+
+If you are new to eBPF, you may want to try the links described as
+“introductions” in this section.
+
+-   [A blog post series about eBPF from Ferris Ellis](https://ferrisellis.com/tags/ebpf/).
 -   [A BPF reference guide](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md)
     about BPF C and bcc Python helpers, from bcc repository.
 -   [Making the Kernel’s Networking Data Path Programmable with BPF and XDP](http://schd.ws/hosted_files/ossna2017/da/BPFandXDP.pdf)
@@ -191,7 +203,123 @@ to start with “kernel documentation”, which is dense).
     Hardware offload for eBPF with TC or XDP (Linux kernel 4.9+), introduced by
     Netronome.
 
-## Projects based on, or related to eBPF
+## Tutorials
+
+-   [bcc Reference Guide](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md):
+    many incremental steps to start using bcc and eBPF, mostly centered on
+    tracing and monitoring.
+-   [bcc Python Developer Tutorial](https://github.com/iovisor/bcc/blob/master/docs/tutorial_bcc_python_developer.md):
+    also comes with bcc, but targets the Python bits across seventeen “lessons”.
+-   [Linux Tracing Workshops Materials](https://github.com/goldshtn/linux-tracing-workshop)
+    from Sasha Goldshtein: involves the use of several BPF tools for tracing.
+-   [Tracing a packet journey using Linux tracepoints, perf and eBPF](https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/)
+    from Jean-Tiare Le Bigot: troobleshooting ping requests and replies with
+    perf and bcc programs.
+-   [Open NFP platform](https://open-nfp.org/dataplanes-ebpf/technical-papers/)
+    operated by Netronome: some tutorials for network-related eBPF use cases, including an eBPF Offload Starting Guide.
+-   [XDP for the Rest of Us](http://netdevconf.org/2.1/session.html?gospodarek)
+    from Jesper Dangaard Brouer and Andy Gospodarek at Netdev 2.1:
+    first edition of a workshop to get started with XDP.
+-   [XDP for the Rest of Us](https://www.netdevconf.org/2.2/session.html?gospodarek-xdp-workshop)
+    from the same authors, at Netdev 2.2: second edition, with new contents.
+
+## Examples
+
+-   [linux/samples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/samples/bpf)
+    in the kernel tree: some sample eBPF programs.
+-   [linux/tools/testing/selftests/bpf](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/testing/selftests/bpf)
+    in the kernel tree: Linux BPF selftests, with many eBPF programs.
+-   [prototype-kernel/kernel/samples/bpf](https://github.com/netoptimizer/prototype-kernel/tree/master/kernel/samples/bpf)
+    from Jesper Dangaard Brouer's prototype-kernel repository contains some
+    additional examples that can be compiled outside of kernel infrastructure.
+-   [iproute2/examples/bpf/](https://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git/tree/examples/bpf)
+    from iproute2 package: some networking programs to attach to the TC
+    interface.
+-   [bcc/examples](https://github.com/iovisor/bcc/tree/master/examples):
+    coming along with the bcc tools, mostly about tracing.
+-   [bcc/tools](https://github.com/iovisor/bcc/tree/master/tools)
+    themselves can be seen as example use cases for BPF programs, mostly for
+    tracing and monitoring. bcc tools have been packaged for some Linux
+    distributions.
+-   [MPLSinIP sample](https://github.com/fzakaria/eBPF-mpls-encap-decap)
+    a heavily commented sample demonstrating how to encapsulate & decapsulate MPLS within IP.
+    The code is commented for those new to BPF development.
+
+## eBPF Workflow: Tools and Utilities
+
+### bcc
+
+-   [bcc](https://github.com/iovisor/bcc/) framework and set of tools - One way
+    to handle BPF programs, in particular for tracing and monitoring. Also
+    includes some utilities that may help inspect maps or programs on the
+    system.
+-   [P4 compiler for BPF targets](https://github.com/iovisor/bcc/tree/master/src/cc/frontends/p4/compiler)
+    for bcc - An alternative to the restricted C.
+-   [Lua front-end](https://github.com/iovisor/bcc/tree/master/src/lua) for
+    bcc - Another alternative to C, and even to most of the Python code used in
+    bcc.
+
+### iproute2
+
+-   [iproute2](https://git.kernel.org/pub/scm/network/iproute2/iproute2.git) -
+    Package containing tools for network management on Linux. In particular, it
+    contains `tc`, used to manage eBPF filters and actions, and `ip`, used to
+    manage XDP programs. Most of the code related to BPF is in lib/bpf.c.
+-   [iproute2-next](https://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git) -
+    The development tree, synchronised with net-next.
+
+### LLVM
+
+-   [LLVM](https://llvm.org/) package contains several tools used in eBPF
+    workflow. Snapshots of the latest versions for Ubuntu/Debian can be
+    retrieved from [here](http://apt.llvm.org/).
+    -   clang is used to compile C to eBPF object file under the ELF format
+        (clang v3.7.1+). The BPF backend was added with
+        [this commit](https://reviews.llvm.org/D6494).
+    -   llvm-objdump is used to dump the content of an object file in
+        human-readable format, possibly with the initial C source code
+        (llvm-objdump v4.0+).
+    -   llvm-mc is used to compile from LLVM intermediate representation to
+        eBPF object file, so that one can compile from C to eBPF assembly,
+        tinker with assembly, then compile to ELF file.
+
+### bpftool and Other Tools from the Kernel Tree
+
+-   [bpftool](https://git.kernel.org/pub/scm/linux/kernel/git/bpf/bpf-next.git/tree/tools/bpf/bpftool)
+    and other tools in the kernel tree, under
+    [linux/tools/net/](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/net?h=v4.14)
+    for versions earlier than 4.15, or
+    [linux/tools/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/bpf)
+    after that:
+    -   `bpftool` - A generic utility that can be used to interact with eBPF
+        programs and maps from userspace, for example to show, dump, load,
+        disassemble, pin programs, or to show, create, pin, update, delete
+        maps, or to attach and detach programs to cgroups.
+    -   `bpf_asm` - A minimal cBPF assembler.
+    -   `bpf_dbg` - A small debugger for cBPF programs.
+    -   `bpf_jit_disasm` - A disassembler for both BPF flavors and could be
+        highly useful for JIT debugging.
+
+### User Space eBPF
+
+-   [uBPF](https://github.com/iovisor/ubpf/) - Written in C. Contains an
+    interpreter, a JIT compiler for x86_64 architecture, an assembler and a
+    disassembler.
+-   [A generic implementation](https://github.com/YutaroHayakawa/generic-ebpf) -
+    With support for FreeBSD kernel, FreeBSD user space, Linux kernel, Linux
+    user space and MacOSX user space. Used for the [BPF extension module for
+    VALE switch](https://github.com/YutaroHayakawa/vale-bpf).
+-   [rbpf](https://github.com/qmonnet/rbpf) - Written in Rust. Interpreter for
+    Linux, MacOSX and Windows, and JIT-compiler for x86_64 under Linux.
+
+### Testing in Virtual Environments
+
+-   [A Vagrant setup](https://github.com/iovisor/xdp-vagrant) - To easily test
+    XDP. Less useful now that generic XDP (driver-independant, mostly for
+    testing) exists.
+-   [bcc in a Docker container](https://github.com/zlim/bcc-docker).
+
+## Projects Related to eBPF
 
 -   P4 has some interactions with eBPF:
     -   [P4 on the Edge](https://schd.ws/hosted_files/2016p4workshop/1d/Intel%20Fastabend-P4%20on%20the%20Edge.pdf)
@@ -266,48 +394,6 @@ to start with “kernel documentation”, which is dense).
 -   [bpfd](https://github.com/genuinetools/bpfd) Framework for running BPF
     programs with rules on Linux as a daemon. Container aware.
 
-## Tutorials
-
--   [bcc Reference Guide](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md):
-    many incremental steps to start using bcc and eBPF, mostly centered on
-    tracing and monitoring.
--   [bcc Python Developer Tutorial](https://github.com/iovisor/bcc/blob/master/docs/tutorial_bcc_python_developer.md):
-    also comes with bcc, but targets the Python bits across seventeen “lessons”.
--   [Linux Tracing Workshops Materials](https://github.com/goldshtn/linux-tracing-workshop)
-    from Sasha Goldshtein: involves the use of several BPF tools for tracing.
--   [Tracing a packet journey using Linux tracepoints, perf and eBPF](https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/)
-    from Jean-Tiare Le Bigot: troobleshooting ping requests and replies with
-    perf and bcc programs.
--   [Open NFP platform](https://open-nfp.org/dataplanes-ebpf/technical-papers/)
-    operated by Netronome: some tutorials for network-related eBPF use cases, including an eBPF Offload Starting Guide.
--   [XDP for the Rest of Us](http://netdevconf.org/2.1/session.html?gospodarek)
-    from Jesper Dangaard Brouer and Andy Gospodarek at Netdev 2.1:
-    first edition of a workshop to get started with XDP.
--   [XDP for the Rest of Us](https://www.netdevconf.org/2.2/session.html?gospodarek-xdp-workshop)
-    from the same authors, at Netdev 2.2: second edition, with new contents.
-
-## Examples
-
--   [linux/samples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/samples/bpf)
-    in the kernel tree: some sample eBPF programs.
--   [linux/tools/testing/selftests/bpf](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/testing/selftests/bpf)
-    in the kernel tree: Linux BPF selftests, with many eBPF programs.
--   [prototype-kernel/kernel/samples/bpf](https://github.com/netoptimizer/prototype-kernel/tree/master/kernel/samples/bpf)
-    from Jesper Dangaard Brouer's prototype-kernel repository contains some
-    additional examples that can be compiled outside of kernel infrastructure.
--   [iproute2/examples/bpf/](https://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git/tree/examples/bpf)
-    from iproute2 package: some networking programs to attach to the TC
-    interface.
--   [bcc/examples](https://github.com/iovisor/bcc/tree/master/examples):
-    coming along with the bcc tools, mostly about tracing.
--   [bcc/tools](https://github.com/iovisor/bcc/tree/master/tools)
-    themselves can be seen as example use cases for BPF programs, mostly for
-    tracing and monitoring. bcc tools have been packaged for some Linux
-    distributions.
--   [MPLSinIP sample](https://github.com/fzakaria/eBPF-mpls-encap-decap)
-    a heavily commented sample demonstrating how to encapsulate & decapsulate MPLS within IP.
-    The code is commented for those new to BPF development.
-
 ## The Code
 
 -   [linux/include/linux/bpf.h](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/include/linux/bpf.h),
@@ -349,80 +435,6 @@ to start with “kernel documentation”, which is dense).
     into the kernel from user space. This function in turns uses a callback
     from the relevant driver.
 
-## Tools and utilities
-
-### bcc
-
--   [bcc](https://github.com/iovisor/bcc/) framework and set of tools - One way
-    to handle BPF programs, in particular for tracing and monitoring. Also
-    includes some utilities that may help inspect maps or programs on the
-    system.
--   [P4 compiler for BPF targets](https://github.com/iovisor/bcc/tree/master/src/cc/frontends/p4/compiler)
-    for bcc - An alternative to the restricted C.
--   [Lua front-end](https://github.com/iovisor/bcc/tree/master/src/lua) for
-    bcc - Another alternative to C, and even to most of the Python code used in
-    bcc.
-
-### iproute2
-
--   [iproute2](https://git.kernel.org/pub/scm/network/iproute2/iproute2.git) -
-    Package containing tools for network management on Linux. In particular, it
-    contains `tc`, used to manage eBPF filters and actions, and `ip`, used to
-    manage XDP programs. Most of the code related to BPF is in lib/bpf.c.
--   [iproute2-next](https://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git) -
-    The development tree, synchronised with net-next.
-
-### LLVM
-
--   [LLVM](https://llvm.org/) package contains several tools used in eBPF
-    workflow. Snapshots of the latest versions for Ubuntu/Debian can be
-    retrieved from [here](http://apt.llvm.org/).
-    -   clang is used to compile C to eBPF object file under the ELF format
-        (clang v3.7.1+). The BPF backend was added with
-        [this commit](https://reviews.llvm.org/D6494).
-    -   llvm-objdump is used to dump the content of an object file in
-        human-readable format, possibly with the initial C source code
-        (llvm-objdump v4.0+).
-    -   llvm-mc is used to compile from LLVM intermediate representation to
-        eBPF object file, so that one can compile from C to eBPF assembly,
-        tinker with assembly, then compile to ELF file.
-
-### bpftool and others from the kernel tree
-
--   [bpftool](https://git.kernel.org/pub/scm/linux/kernel/git/bpf/bpf-next.git/tree/tools/bpf/bpftool)
-    and other tools in the kernel tree, under
-    [linux/tools/net/](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/net?h=v4.14)
-    for versions earlier than 4.15, or
-    [linux/tools/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/bpf)
-    after that:
-    -   `bpftool` - A generic utility that can be used to interact with eBPF
-        programs and maps from userspace, for example to show, dump, load,
-        disassemble, pin programs, or to show, create, pin, update, delete
-        maps, or to attach and detach programs to cgroups.
-    -   `bpf_asm` - A minimal cBPF assembler.
-    -   `bpf_dbg` - A small debugger for cBPF programs.
-    -   `bpf_jit_disasm` - A disassembler for both BPF flavors and could be
-        highly useful for JIT debugging.
-
-### User space eBPF
-
--   [uBPF](https://github.com/iovisor/ubpf/) - Written in C. Contains an
-    interpreter, a JIT compiler for x86_64 architecture, an assembler and a
-    disassembler.
--   [A generic implementation](https://github.com/YutaroHayakawa/generic-ebpf) -
-    With support for FreeBSD kernel, FreeBSD user space, Linux kernel, Linux
-    user space and MacOSX user space. Used for the [BPF extension module for
-    VALE switch](https://github.com/YutaroHayakawa/vale-bpf).
--   [rbpf](https://github.com/qmonnet/rbpf) - Written in Rust. Interpreter for
-    Linux, MacOSX and Windows, and JIT-compiler for x86_64 under Linux.
-
-### Testing in virtual environments
-
--   [A Vagrant setup](https://github.com/iovisor/xdp-vagrant) - To easily test
-    XDP. Less useful now that generic XDP (driver-independant, mostly for
-    testing) exists.
--   [bcc in a Docker container](https://github.com/zlim/bcc-docker).
-
 ## Development and Community
 
 -   [The bpf-next tree](https://git.kernel.org/pub/scm/linux/kernel/git/bpf/bpf-next.git/) -
@@ -442,7 +454,7 @@ to start with “kernel documentation”, which is dense).
     mailing list.
 -   [@IOVisor Twitter account](https://twitter.com/IOVisor).
 
-## Other lists of resources on eBPF
+## Other Lists of Resources on eBPF
 
 -   [IO Visor's bcc documentation](https://github.com/iovisor/bcc/tree/master/docs)
 -   [IO Visor's bpf-docs repository](https://github.com/iovisor/bpf-docs/)
@@ -452,7 +464,7 @@ to start with “kernel documentation”, which is dense).
 
 Thank you to Quentin Monnet and Daniel Borkmann for their original work on [Dive into BPF: A List of Reading Material](https://qmonnet.github.io/whirl-offload/2016/09/01/dive-into-bpf/) which became the basis for this list.
 
-## Contribute
+## Contributing
 
 Contributions welcome! Read the [contribution guidelines](contributing.md) first.
 
