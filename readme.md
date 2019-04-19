@@ -278,6 +278,7 @@ to start with “kernel documentation”, which is dense).
     first edition of a workshop to get started with XDP.
 -   [XDP for the Rest of Us](https://www.netdevconf.org/2.2/session.html?gospodarek-xdp-workshop)
     from the same authors, at Netdev 2.2: second edition, with new contents.
+-   [Notes on bpf](https://blogs.oracle.com/linux/notes-on-bpf-1) Some wonderful tutorial or notes about (e)bpf from oracle.
 
 ## Examples
 
