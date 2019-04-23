@@ -81,6 +81,13 @@ to start with “kernel documentation”, which is dense).
     Presentation by the author of eBPF.
 -   [Extending extended BPF](https://lwn.net/Articles/603983/)
     (Jonathan Corbet, July 2014).
+-   Greg Marsden made some documentions or notes about eBPF
+    -	[A Tour of Program Types](https://blogs.oracle.com/linux/notes-on-bpf-1) A description of all existing hooks for BPF program types, and of their interest.
+    -	[BPF helper functions](https://blogs.oracle.com/linux/notes-on-bpf-2) A review of the kernel functions that can be called from within eBPF programs
+    -   [Communicating with Userspace](https://blogs.oracle.com/linux/notes-on-bpf-3) How BPF communicates with userspace - BPF maps, perf events, bpf_trace_printk
+    -   [Building BPF Programs](https://blogs.oracle.com/linux/notes-on-bpf-4) Setting up your environment to build BPF programs
+    -   [The BPF Bytecode and the BPF Verifier](https://blogs.oracle.com/linux/notes-on-bpf-5) How does BPF ensure that programs are safe?
+    -   [Using BPF to do Packet Transformation](https://blogs.oracle.com/linux/notes-on-bpf-6) One eBPF usage about  packet transformation
 
 ### BPF Internals
 
@@ -278,13 +285,6 @@ to start with “kernel documentation”, which is dense).
     first edition of a workshop to get started with XDP.
 -   [XDP for the Rest of Us](https://www.netdevconf.org/2.2/session.html?gospodarek-xdp-workshop)
     from the same authors, at Netdev 2.2: second edition, with new contents.
--   Generic Documentation and Presentions from oracle's Greg Marsden
-    -	[eBPF Program type](https://blogs.oracle.com/linux/notes-on-bpf-1) Some notes aboye ebpf program_type.
-    -	[BPF helper functions](https://blogs.oracle.com/linux/notes-on-bpf-2) BPF helper functions
-    -   [Communicating with Userspace](https://blogs.oracle.com/linux/notes-on-bpf-3) Communicating with Userspace
-    -   [Building BPF Programs](https://blogs.oracle.com/linux/notes-on-bpf-4) Setting up your environment to build BPF programs
-    -   [The BPF Bytecode and the BPF Verifier](https://blogs.oracle.com/linux/notes-on-bpf-5) BPF bytecodes and the BPF verifier
-    -   [Using BPF to do Packet Transformation](https://blogs.oracle.com/linux/notes-on-bpf-6) BPF packet transformation using tc
 
 
 ## Examples
