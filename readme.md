@@ -81,6 +81,13 @@ to start with “kernel documentation”, which is dense).
     Presentation by the author of eBPF.
 -   [Extending extended BPF](https://lwn.net/Articles/603983/)
     (Jonathan Corbet, July 2014).
+-   Greg Marsden made some documentation about eBPF
+    -   [A Tour of Program Types](https://blogs.oracle.com/linux/notes-on-bpf-1) A description of all existing hooks for BPF program types, and of their interest.
+    -   [BPF helper functions](https://blogs.oracle.com/linux/notes-on-bpf-2) A review of the kernel functions that can be called from within eBPF programs
+    -   [Communicating with Userspace](https://blogs.oracle.com/linux/notes-on-bpf-3) How BPF communicates with userspace - BPF maps, perf events, bpf_trace_printk
+    -   [Building BPF Programs](https://blogs.oracle.com/linux/notes-on-bpf-4) Setting up your environment to build BPF programs
+    -   [The BPF Bytecode and the BPF Verifier](https://blogs.oracle.com/linux/notes-on-bpf-5) How does BPF ensure that programs are safe?
+    -   [Using BPF to do Packet Transformation](https://blogs.oracle.com/linux/notes-on-bpf-6) One eBPF usage about  packet transformation
 
 ### BPF Internals
 
