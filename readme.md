@@ -43,12 +43,14 @@ examples to which eBPF brings performance, programmability and flexibility.
 
 ### Kernel Documentation
 
+-   [BPF Documentation](https://www.kernel.org/doc/html/latest/bpf/index.html)
+    Index for BPF-related documentation coming with the Linux kernel.
 -   [linux/Documentation/networking/filter.txt](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/networking/filter.txt).
     eBPF specification (somewhat outdated; information should still be valid,
     but not exhaustive).
--   [linux/Documentation/bpf/bpf_design_QA.rst](https://www.kernel.org/doc/Documentation/bpf/bpf_design_QA.rst).
-    Frequently Asked Questions on eBPF design.
--   [linux/Documentation/bpf/bpf_devel_QA.rst](https://git.kernel.org/pub/scm/linux/kernel/git/bpf/bpf-next.git/tree/Documentation/bpf/bpf_devel_QA.rst).
+-   [BPF Design Q&A](https://www.kernel.org/doc/html/latest/bpf/bpf_design_QA.html)
+    Frequently Asked Questions on the decisions behind the BPF infrastructure.
+-   [HOWTO interact with BPF subsystem](https://www.kernel.org/doc/html/latest/bpf/bpf_devel_QA.html).
     Frequently Asked Questions about contributing to eBPF development.
 
 ### Manual Pages
@@ -58,6 +60,9 @@ examples to which eBPF brings performance, programmability and flexibility.
     userspace.
 -   [`tc-bpf(8)` man page](http://man7.org/linux/man-pages/man8/tc-bpf.8.html)
     about using BPF with tc, including example commands and samples of code.
+-   [`bpf-helpers(7)` man page](http://man7.org/linux/man-pages/man7/bpf-helpers.7.html)
+    Description of the in-kernel helper functions forming the BPF standard
+    library.
 
 ### Other
 
@@ -84,6 +89,10 @@ If you are new to eBPF, you may want to try the links described as
     (Diego Pino García, January 2019)
     An accessible introduction providing context, history, and details about
     the functioning of eBPF.
+-   An eBPF Overview - Blog series by Adrian Ratiu, covering many aspects of
+    the eBPF infrastructure:
+    - [Part 1: Introduction](https://www.collabora.com/news-and-blog/blog/2019/04/05/an-ebpf-overview-part-1-introduction/)
+    - [Part 2: Machine & Bytecode](https://www.collabora.com/news-and-blog/blog/2019/04/15/an-ebpf-overview-part-2-machine-and-bytecode/)
 -   [A blog post series about eBPF from Ferris Ellis](https://ferrisellis.com/tags/ebpf/).
 -   [A BPF reference guide](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md)
     about BPF C and bcc Python helpers, from bcc repository.
@@ -141,6 +150,9 @@ If you are new to eBPF, you may want to try the links described as
 
 ### Kernel Tracing
 
+-   [Full-system dynamic tracing on Linux using eBPF and bpftrace](https://www.joyfulbikeshedding.com/blog/2019-01-31-full-system-dynamic-tracing-on-linux-using-ebpf-and-bpftrace.html)
+    A detailed introduction to tracing with eBPF, from listing the available
+    trace points to running bpftrace programs.
 -   [Meet-cute between eBPF and Kernel Tracing](http://www.slideshare.net/vh21/meet-cutebetweenebpfandtracing)
     (Viller Hsiao, July 2016)
     Kprobes, uprobes, ftrace
@@ -210,6 +222,8 @@ If you are new to eBPF, you may want to try the links described as
 
 ### AF\_XDP
 
+-   [AF\_XDP](https://www.kernel.org/doc/html/latest/networking/af_xdp.html)
+    Kernel documentation on the AF\_XDP address family.
 -   [Fast Packet Processing in Linux with AF\_XDP](https://archive.fosdem.org/2018/schedule/event/af_xdp/)
     (Björn Töpel and Magnus Karlsson, FOSDEM 2018, Brussels, February 2018).
 
@@ -219,6 +233,14 @@ If you are new to eBPF, you may want to try the links described as
     by Thomas Graf about the motivations behind this project.
 -   [A brief introduction](https://qmo.fr/docs/talk_20180316_frnog_bpfilter.pdf)
     by Quentin Monnet at FRnOG 30.
+
+### BTF
+
+-   [BPF Type Format (BTF)](https://www.kernel.org/doc/html/latest/bpf/btf.html)
+    Kernel documentation about BTF, explaining how to use it.
+-   [Enhancing the Linux kernel with BTF type information](https://facebookmicrosites.github.io/bpf/blog/2018/11/14/btf-enhancement.html)
+    A description of the work done with BTF to provide debugging information
+    for BPF programs.
 
 ### cBPF
 
@@ -266,6 +288,9 @@ If you are new to eBPF, you may want to try the links described as
     from the same authors, at Netdev 2.2: second edition, with new contents.
 -   [Load XDP programs using the ip (iproute2) command](https://medium.com/@fntlnz/load-xdp-programs-using-the-ip-iproute2-command-502043898263)
     by Lorenza Fontana.
+-   [XDP Hands-On Tutorial](https://github.com/xdp-project/xdp-tutorial) A
+    progressive (three levels of difficulty) tutorial to learn how to process
+    packets with XDP.
 
 ## Examples
 
@@ -291,6 +316,9 @@ If you are new to eBPF, you may want to try the links described as
 -   [MPLSinIP sample](https://github.com/fzakaria/eBPF-mpls-encap-decap)
     a heavily commented sample demonstrating how to encapsulate & decapsulate MPLS within IP.
     The code is commented for those new to BPF development.
+-   [ebpf-samples](https://github.com/vbpf/ebpf-samples) A collection of
+    compiled (as ELF object files) samples gathered from several projects,
+    primarily intended to serve as test cases for user space verifiers.
 
 ## eBPF Workflow: Tools and Utilities
 
@@ -365,6 +393,10 @@ If you are new to eBPF, you may want to try the links described as
     VALE switch](https://github.com/YutaroHayakawa/vale-bpf).
 -   [rbpf](https://github.com/qmonnet/rbpf) - Written in Rust. Interpreter for
     Linux, MacOSX and Windows, and JIT-compiler for x86_64 under Linux.
+-   [PREVAIL](https://github.com/vbpf/ebpf-verifier) - A user space verifier
+    for eBPF
+    [using an abstract interpretation layer](https://elazarg.github.io/pldi19main-final.pdf),
+    with support for loops.
 
 ### Testing in Virtual Environments
 
@@ -459,6 +491,8 @@ If you are new to eBPF, you may want to try the links described as
 -   [bpftrace](https://github.com/iovisor/bpftrace) A tool for tracing, again
     with its own DSL. It is flexible enough to be envisioned as a Linux
     replacement for DTrace and SystemTap.
+-   [kubectl trace](https://github.com/iovisor/kubectl-trace) A kubectl plug-in
+    for executing bpftrace programs in a Kubernetes cluster.
 -   [bpfd](https://github.com/genuinetools/bpfd) Framework for running BPF
     programs with rules on Linux as a daemon. Container aware.
 -   [BPFd](https://github.com/joelagnel/bpfd) A distinct BPF daemon, trying to
@@ -531,6 +565,9 @@ If you are new to eBPF, you may want to try the links described as
     BPF is at the heart of the project, and is regularly discussed on the
     mailing list.
 -   [@IOVisor Twitter account](https://twitter.com/IOVisor).
+-   [The XDP Collaboration Project](https://github.com/xdp-project/xdp-project) -
+    A GitHub repository with notes and ideas regarding the future evolutions of
+    XDP.
 
 ## Other Lists of Resources on eBPF
 
