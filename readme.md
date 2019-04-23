@@ -286,7 +286,6 @@ to start with “kernel documentation”, which is dense).
 -   [XDP for the Rest of Us](https://www.netdevconf.org/2.2/session.html?gospodarek-xdp-workshop)
     from the same authors, at Netdev 2.2: second edition, with new contents.
 
-
 ## Examples
 
 -   [linux/samples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/samples/bpf)
