@@ -1,12 +1,13 @@
 # Awesome eBPF [![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
 
 > A curated list of awesome projects related to eBPF.
->
-> Note: eBPF is an exciting piece of technology, and it's ecosystem is constantly evolving. We'd love help from _you_ to keep this awesome list up to date, and improve its signal-to-noise ratio in anyway we can. Please feel free to leave [any feedback](https://github.com/zoidbergwill/awesome-ebpf/issues).
+
+BPF, as in _Berkeley Packet Filter_, is an in-kernel virtual machine running programs passed from user space. Initially implemented on BSD, then Linux, the (now legacy) "classic BPF" or cBPF machine would be used with tools like tcpdump for filtering packets in the kernel to avoid useless copies to user space. More recently, the BPF infrastructure in Linux has been completely reworked and gave life to the "extended BPF", or eBPF, which gained new features (safety and termination checks, JIT-compiling for programs, persistent maps, a standard library, hardware offload support, etc.) and is now used for many taks. Processing packets at a very low level (XDP), tracing and monitoring events on the system, or enforcing access control over cgroups are but a few examples to which eBPF brings performance, programmability and flexibility.
+
+> Note: eBPF is an exciting piece of technology, and its ecosystem is constantly evolving. We'd love help from _you_ to keep this awesome list up to date, and improve its signal-to-noise ratio in anyway we can. Please feel free to leave [any feedback](https://github.com/zoidbergwill/awesome-ebpf/issues).
 
 ## Contents
 
-- [What is BPF](#what-is-bpf)
 - [Reference Documentation](#reference-documentation)
 - [Articles and Presentations](#articles-and-presentations)
 - [Tutorials](#tutorials)
@@ -17,10 +18,6 @@
 - [Development and Community](#development-and-community)
 - [Other Lists of Resources on eBPF](#other-lists-of-resources-on-ebpf)
 - [Acknowledgement](#acknowledgement)
-
-## What is BPF
-
-BPF, as in _Berkeley Packet Filter_, is an in-kernel virtual machine running programs passed from user space. Initially implemented on BSD, then Linux, the (now legacy) "classic BPF" or cBPF machine would be used with tools like tcpdump for filtering packets in the kernel to avoid useless copies to user space. More recently, the BPF infrastructure in Linux has been completely reworked and gave life to the "extended BPF", or eBPF, which gained new features (safety and termination checks, JIT-compiling for programs, persistent maps, a standard library, hardware offload support, etc.) and is now used for many taks. Processing packets at a very low level (XDP), tracing and monitoring events on the system, or enforcing access control over cgroups are but a few examples to which eBPF brings performance, programmability and flexibility.
 
 ## Reference Documentation
 
