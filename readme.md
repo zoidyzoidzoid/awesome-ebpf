@@ -71,7 +71,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [BPF: tracing and more](http://www.slideshare.net/brendangregg/bpf-tracing-and-more) - An introduction mostly covering the tracing aspects.
 - [Linux BPF Superpowers](http://www.slideshare.net/brendangregg/linux-bpf-superpowers) - An introduction mostly covering the tracing aspects, first part with flame graphs.
 - [IO Visor](https://www.socallinuxexpo.org/sites/default/files/presentations/Room%20211%20-%20IOVisor%20-%20SCaLE%2014x.pdf) - Also introduces [IO Visor project](https://www.iovisor.org/).
-- [BPF -- in-kernel virtual machine](https://events.linuxfoundation.org/sites/events/files/slides/bpf_collabsummit_2015feb20.pdf) - Presentation by the author of eBPF.
+- [BPF -- in-kernel virtual machine](http://vger.kernel.org/netconf2015Starovoitov-bpf_collabsummit_2015feb20.pdf) - Presentation by the author of eBPF.
 - [Extending extended BPF](https://lwn.net/Articles/603983/) - A blog post from 2014 on the development of BPF and demonstrating what can be done with it, using an example of stateful socket filtering by attaching an eBPF program to a socket.
 - Greg Marsden made some documentation about eBPF:
   - [A Tour of Program Types](https://blogs.oracle.com/linux/notes-on-bpf-1) - A description of all existing hooks for BPF program types, and of their interest.
