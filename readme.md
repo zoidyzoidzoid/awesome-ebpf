@@ -251,6 +251,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
   - [Coupling the Flexibility of OVN with the Efficiency of IOVisor](http://openvswitch.org/support/ovscon2016/7/1245-bertrone.pdf)
 
 - [Katran](https://code.fb.com/open-source/open-sourcing-katran-a-scalable-network-load-balancer/) - A layer 4 load-balancer based on XDP, open-sourced by Facebook.
+- [Kernel-collector](https://github.com/netdata/kernel-collector) - Linux Kernel eBPF Collectors
 - [XDP in practice: integrating XDP in our DDoS mitigation pipeline](http://netdevconf.org/2.1/session.html?bertin) - Protection against DDoS with XDP at Cloudflare.
 - [Droplet: DDoS countermeasures powered by BPF + XDP](http://netdevconf.org/2.1/session.html?zhou) - Protection against DDoS with XDP at Facebook.
 - [DPDK has a poll-mode driver (PMD) based on AF_XDP](https://dpdkuserspace2018.sched.com/event/G45Z/dpdk-pmd-for-afxdp)
@@ -264,6 +265,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
   - [eBPF and XDP seen from the eyes of a meerkat](https://www.slideshare.net/ennael/kernel-recipes-2017-ebpf-and-xdp-eric-leblond)
 
 - [Sysdig](https://github.com/draios/sysdig) - A tool for "universal system visibility with native support for containers", now supports eBPF.
+- [Netdata](https://learn.netdata.cloud/docs/agent/collectors/ebpf_process.plugin/) - A zero configuration monitoring tool that provides per second resolution for thousand of metrics now support eBPF.
 - [InKeV: In-Kernel Distributed Network Virtualization for DCN](https://github.com/iovisor/bpf-docs/blob/master/university/sigcomm-ccr-InKev-2016.pdf)
 - [gobpf - utilizing eBPF from Go](https://fosdem.org/2017/schedule/event/go_bpf/) - A library to create, load and use eBPF programs from Go.
 - [ply](https://wkz.github.io/ply/) - A small but flexible open source dynamic tracer for Linux, with features similar to the bcc tools, but with a simpler language inspired by awk and DTrace.
