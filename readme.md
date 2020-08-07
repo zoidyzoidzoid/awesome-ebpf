@@ -165,6 +165,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [XDP for the Rest of Us](https://www.netdevconf.org/2.2/session.html?gospodarek-xdp-workshop) - Second edition, with new contents.
 - [Load XDP programs using the ip (iproute2) command](https://medium.com/@fntlnz/load-xdp-programs-using-the-ip-iproute2-command-502043898263)
 - [XDP Hands-On Tutorial](https://github.com/xdp-project/xdp-tutorial) - A progressive (three levels of difficulty) tutorial to learn how to process packets with XDP.
+- [ACM Computing Surveys - Fast Packet Processing with eBPF and XDP](https://dl.acm.org/doi/abs/10.1145/3371038): Concepts, Code, Challenges, and Applications
 
 ## Examples
 
