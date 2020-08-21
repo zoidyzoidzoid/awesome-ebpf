@@ -23,7 +23,8 @@ BPF, as in _Berkeley Packet Filter_, is an in-kernel virtual machine running pro
 
 ### Cilium Guide
 
-- [Cilum's BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/) - Generic documentation about most features of eBPF.
+- [Cilum's New BPF and XDP Reference Guide](https://ebpf.io/) - General documentation about features of eBPF, with a lot of pretty diagrams, and links to a bunch of related [projects](https://ebpf.io/projects).
+- [Cilum's Older BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/) - Generic documentation about most features of eBPF.
 
 ### Kernel Documentation
 
