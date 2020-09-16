@@ -23,13 +23,10 @@ Recently [Cilium](https://cilium.io) launched a great website about eBPF called 
 
 ## Reference Documentation
 
-### eBPF-Specific Documentation
+### eBPF Essentials
 
-- [ebpf.io](https://ebpf.io/) - General documentation including an introduction & links to some community resources
-
-### Cilium Guide
-
-- [Cilium's BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/) - Generic documentation about most features of eBPF.
+- [ebpf.io](https://ebpf.io/) - A gateway to discover all the basics of eBPF, including a listing of the main related projects and of community resources.
+- [Cilium's BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/) - In-depth documentation about most features and aspects of eBPF.
 
 ### Kernel Documentation
 
