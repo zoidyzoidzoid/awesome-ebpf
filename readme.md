@@ -160,6 +160,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 
 ## Tutorials
 
+- [Building BPF applications with libbpf-bootstrap](https://nakryiko.com/posts/libbpf-bootstrap/) - Get started with your own BPF application quickly and painlessly using the modern BPF CO-RE facilities. No runtime clang/LLVM dependency whatsoever.
 - [bcc Reference Guide](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md) - Many incremental steps to start using bcc and eBPF, mostly centered on tracing and monitoring.
 - [bcc Python Developer Tutorial](https://github.com/iovisor/bcc/blob/master/docs/tutorial_bcc_python_developer.md) - Comes with bcc, but targets the Python bits across seventeen "lessons".
 - [Linux Tracing Workshops Materials](https://github.com/goldshtn/linux-tracing-workshop) - Involves the use of several BPF tools for tracing.
@@ -207,6 +208,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 ### libbpf
 
 - [libbpf](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/lib/bpf) - A C library used for handling BPF objects (programs and maps), and manipulating ELF object files containing them. It is shipped with the kernel and [mirrored on GitHub](https://github.com/libbpf/libbpf).
+- [libbpf-bootstrap](https://github.com/libbpf/libbpf-bootstrap) - scaffolding for BPF application development with libbpf and BPF CO-RE
 
 ### bpftool and Other Tools from the Kernel Tree
 
