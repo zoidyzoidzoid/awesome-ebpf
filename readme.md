@@ -208,7 +208,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 ### libbpf
 
 - [libbpf](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/lib/bpf) - A C library used for handling BPF objects (programs and maps), and manipulating ELF object files containing them. It is shipped with the kernel and [mirrored on GitHub](https://github.com/libbpf/libbpf).
-- [libbpf-bootstrap](https://github.com/libbpf/libbpf-bootstrap) - scaffolding for BPF application development with libbpf and BPF CO-RE
+- [libbpf-bootstrap](https://github.com/libbpf/libbpf-bootstrap) - Scaffolding for BPF application development with libbpf and BPF CO-RE.
 
 ### bpftool and Other Tools from the Kernel Tree
 
