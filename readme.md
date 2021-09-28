@@ -157,6 +157,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 
 - [eBPF/XDP hardware offload to SmartNICs](http://netdevconf.org/1.2/session.html?jakub-kicinski) - Hardware offload for eBPF with TC or XDP (Linux kernel 4.9+), introduced by Netronome.
 - [Comprehensive XDP offload---Handling the edge cases](https://www.netdevconf.org/2.2/session.html?viljoen-xdpoffload-talk) - An update on the topic above.
+- [hBPF - eBPF in hardware](https://github.com/rprinz08/hBPF) - An eBPF CPU written for FPGAs.
 - [OpenCSD eBPF SSD offloading](https://github.com/Dantali0n/qemu-csd) - Computational Storage simulation (QEMU) platform with FUSE LFS filesystem for Zoned Namespaces NVMe SSDs using uBPF for compute kernel offloading, all in userspace.
 
 ## Tutorials
