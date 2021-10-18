@@ -287,6 +287,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [DEEP-mon](https://www.slideshare.net/necstlab/deepmon-dynamic-and-energy-efficient-power-monitoring-for-containerbased-infrastructures) - Helps with measuring power consumption for servers and uses eBPF programs for in-kernel aggregation of data.
 - [upf-bpf](https://github.com/navarrothiago/upf-bpf) - An in-kernel solution based on XDP for 5G UPF.
 - [redbpf](https://github.com/foniod/redbpf) - Tooling and framework to write eBPF code in Rust efficiently.
+- [pixie](https://github.com/pixie-io/pixie) - Observability for Kubernetes using eBPF. Features include protocol tracing, application profiling, and support for distributed bpftrace deployments.
 
 ## The Code
 
