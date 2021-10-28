@@ -213,6 +213,12 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [libbpf](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/lib/bpf) - A C library used for handling BPF objects (programs and maps), and manipulating ELF object files containing them. It is shipped with the kernel and [mirrored on GitHub](https://github.com/libbpf/libbpf).
 - [libbpf-bootstrap](https://github.com/libbpf/libbpf-bootstrap) - Scaffolding for BPF application development with libbpf and BPF CO-RE.
 
+### Aya
+
+- [aya](https://github.com/aya-rs/aya) - A full Rust library for writing, loading, and managing eBPF programs and maps. It has a focus on developer experience and operability and supports writing eBPF programs in Rust and distributing library code over crates.io that can be shared between eBPF programs. Unlike other Rust eBPF implementations, Aya does not depend on libbpf and is 100% written in Rust.
+
+- [aya-template](https://github.com/aya-rs/aya-template) - Templates for writing BPF applications in Aya that can be used with [`cargo generate`](https://github.com/cargo-generate/cargo-generate).
+
 ### bpftool and Other Tools from the Kernel Tree
 
 - [bpftool](https://git.kernel.org/pub/scm/linux/kernel/git/bpf/bpf-next.git/tree/tools/bpf/bpftool) - Also some other tools in the kernel tree, under [linux/tools/net/](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/net?h=v4.14) for versions earlier than 4.15, or [linux/tools/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/bpf) after that:
