@@ -215,8 +215,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 
 ### Aya
 
-- [aya](https://github.com/aya-rs/aya) - A full Rust library for writing, loading, and managing eBPF programs and maps. It has a focus on developer experience and operability and supports writing eBPF programs in Rust and distributing library code over crates.io that can be shared between eBPF programs. Unlike other Rust eBPF implementations, Aya does not depend on libbpf and is 100% written in Rust.
-
+- [aya](https://github.com/aya-rs/aya) - A pure Rust library for writing, loading, and managing eBPF objects, with a focus on developer experience and operability. It supports writing eBPF programs in Rust and distributing library code over crates.io to share it between eBPF programs. Aya does not depend on libbpf.
 - [aya-template](https://github.com/aya-rs/aya-template) - Templates for writing BPF applications in Aya that can be used with [`cargo generate`](https://github.com/cargo-generate/cargo-generate).
 
 ### bpftool and Other Tools from the Kernel Tree
