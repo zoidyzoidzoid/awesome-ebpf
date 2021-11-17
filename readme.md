@@ -218,6 +218,10 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [aya](https://github.com/aya-rs/aya) - A pure Rust library for writing, loading, and managing eBPF objects, with a focus on developer experience and operability. It supports writing eBPF programs in Rust and distributing library code over crates.io to share it between eBPF programs. Aya does not depend on libbpf.
 - [aya-template](https://github.com/aya-rs/aya-template) - Templates for writing BPF applications in Aya that can be used with [`cargo generate`](https://github.com/cargo-generate/cargo-generate).
 
+### oxidebpf
+
+- [oxidebpf](https://github.com/redcanaryco/oxidebpf) - Another pure Rust, permissive licensed, library for loading, attaching, and managing eBPF programs. The featureset is more limited than other libraries, with an emphasis on stability across a wide range of kernels and backwards-compatible compile-once-run-most-places. `oxidebpf` is written with security use cases in mind, but can be applied to other scenarios as well.
+
 ### bpftool and Other Tools from the Kernel Tree
 
 - [bpftool](https://git.kernel.org/pub/scm/linux/kernel/git/bpf/bpf-next.git/tree/tools/bpf/bpftool) - Also some other tools in the kernel tree, under [linux/tools/net/](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/net?h=v4.14) for versions earlier than 4.15, or [linux/tools/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/bpf) after that:
