@@ -220,7 +220,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 
 ### oxidebpf
 
-- [oxidebpf](https://github.com/redcanaryco/oxidebpf) - Another pure Rust, permissive licensed, library for loading, attaching, and managing eBPF programs. The featureset is more limited than other libraries, with an emphasis on stability across a wide range of kernels and backwards-compatible compile-once-run-most-places. `oxidebpf` is written with security use cases in mind, but can be applied to other scenarios as well.
+- [oxidebpf](https://github.com/redcanaryco/oxidebpf) - A pure Rust library for managing eBPF programs, designed for security use cases. The featureset is more limited than other libraries but emphasizes stability across a wide range of kernels and backwards-compatible compile-once-run-most-places.
 
 ### bpftool and Other Tools from the Kernel Tree
 
