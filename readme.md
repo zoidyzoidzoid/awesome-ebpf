@@ -16,8 +16,8 @@ Recently [Cilium](https://cilium.io) launched a great website about eBPF called 
 - [Examples](#examples)
 - [eBPF Workflow: Tools and Utilities](#ebpf-workflow-tools-and-utilities)
 - [Projects Related to eBPF](#projects-related-to-ebpf)
-- [The Code](#the-code)
 - [eBPF in Security](#ebpf-in-security)
+- [The Code](#the-code)
 - [Development and Community](#development-and-community)
 - [Other Lists of Resources on eBPF](#other-lists-of-resources-on-ebpf)
 - [Acknowledgement](#acknowledgement)
@@ -56,7 +56,7 @@ Recently [Cilium](https://cilium.io) launched a great website about eBPF called 
 
 ## Articles and Presentations
 
-### Generic eBPF presentations an articles
+### Generic eBPF Presentations and Articles
 
 If you are new to eBPF, you may want to try the links described as "introductions" in this section.
 
@@ -86,7 +86,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
   - [Using BPF to do Packet Transformation](https://blogs.oracle.com/linux/notes-on-bpf-6) - One eBPF usage about packet transformation.
 - [Linux Kernel Observability through eBPF](https://sematext.com/blog/linux-kernel-observability-ebpf/) - A blog post covering the basics of eBPF as well as code samples in Go on how to build and load a minimal eBPF program into the kernel.
 - [eBPF - From a Programmer's Perspective](https://www.researchgate.net/publication/349173667_eBPF_-_From_a_Programmer's_Perspective) - A short paper describing the fundamentals of eBPF and how to get started with writing eBPF programs.
-- [Cloudflare's blog posts on eBPF](https://blog.cloudflare.com/tag/ebpf/) - Different blog posts about eBPF from Cloudflare.
+- [Cloudflare's blog posts on eBPF](https://blog.cloudflare.com/tag/ebpf/) - Different blog posts about networking use cases and low-level aspects of eBPF.
 
 ### BPF Internals
 
@@ -257,9 +257,8 @@ If you are new to eBPF, you may want to try the links described as "introduction
   - [Old documentation for P4 usage with eBPF](https://github.com/iovisor/bcc/tree/master/src/cc/frontends/p4) - From bcc repository; deprecated by the P4_16 backend linked below.
   - [P4_16 backend for eBPF](https://github.com/p4lang/p4c/blob/master/backends/ebpf/README.md)
 
-- Cilium project ([GitHub repository](https://github.com/cilium/cilium)) is a technology relying on BPF and XDP to provide "fast in-kernel networking and security policy enforcement for containers based on eBPF programs generated on the fly". Many presentations available (with overlap):
+- [Cilium](https://cilium.io/) project ([GitHub repository](https://github.com/cilium/cilium)) is a technology relying on BPF and XDP to provide "fast in-kernel networking and security policy enforcement for containers based on eBPF programs generated on the fly". Many presentations available (with overlap):
 
-  - [Cilium.io](https://cilium.io/) - eBPF-based Networking, Observability, and Security
   - [Cilium: Networking & Security for Containers with BPF & XDP](http://www.slideshare.net/ThomasGraf5/clium-container-networking-with-bpf-xdp) - Also featuring a load balancer use case
   - [Cilium: Networking & Security for Containers with BPF & XDP](http://www.slideshare.net/Docker/cilium-bpf-xdp-for-containers-66969823) - [video](https://www.youtube.com/watch?v=TnJF7ht3ZYc&list=PLkA60AVN3hh8oPas3cq2VA9xB7WazcIgs)
   - [Cilium: Fast IPv6 container Networking with BPF and XDP](http://www.slideshare.net/ThomasGraf5/cilium-fast-ipv6-container-networking-with-bpf-and-xdp)
@@ -290,8 +289,9 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [InKeV: In-Kernel Distributed Network Virtualization for DCN](https://github.com/iovisor/bpf-docs/blob/master/university/sigcomm-ccr-InKev-2016.pdf)
 - [gobpf - utilizing eBPF from Go](https://fosdem.org/2017/schedule/event/go_bpf/) - A library to create, load and use eBPF programs from Go.
 - [ply](https://wkz.github.io/ply/) - A small but flexible open source dynamic tracer for Linux, with features similar to the bcc tools, but with a simpler language inspired by awk and DTrace.
-- [bpftrace](https://github.com/iovisor/bpftrace) - A tool for tracing, again with its own DSL. It is flexible enough to be envisioned as a Linux replacement for DTrace and SystemTap. More information also found on [bpftrace.org](https://bpftrace.org/).
-- [bpftrace Cheat Sheet](https://www.brendangregg.com/BPF/bpftrace-cheat-sheet.html) - bpftrace cheat sheet that you can print out for reference, and is from the [bpftrace programming](https://www.brendangregg.com/ebpf.html#bpftraceprogramming) section of Brendan's [eBPF Tools](https://www.brendangregg.com/ebpf.html) page. 
+- [bpftrace](https://bpftrace.org/) - A tool for tracing with its own high-level tracing language. It is flexible enough to be envisioned as a Linux replacement for DTrace and SystemTap.
+  - [Linux Extended BPF (eBPF) Tracing Tools](https://www.brendangregg.com/ebpf.html) - A in-depth collection of information around examples of performance analysis tools using eBPF.
+  - [bpftrace Cheat Sheet](https://www.brendangregg.com/BPF/bpftrace-cheat-sheet.html) - Summary and cheat sheet for programming in bpftrace. Contains information about syntax, prope types, variables and functions.
 - [kubectl trace](https://github.com/iovisor/kubectl-trace) - A kubectl plug-in for executing bpftrace programs in a Kubernetes cluster.
 - [bpfd](https://github.com/genuinetools/bpfd) - Framework for running BPF programs with rules on Linux as a daemon. Container aware.
 - [BPFd](https://github.com/joelagnel/bpfd) - A distinct BPF daemon, trying to leverage the flexibility of the bcc tools to trace and debug remote targets, and in particular devices running with Android.
@@ -302,11 +302,23 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [upf-bpf](https://github.com/navarrothiago/upf-bpf) - An in-kernel solution based on XDP for 5G UPF.
 - [redbpf](https://github.com/foniod/redbpf) - Tooling and framework to write eBPF code in Rust efficiently.
 - [pixie](https://github.com/pixie-io/pixie) - Observability for Kubernetes using eBPF. Features include protocol tracing, application profiling, and support for distributed bpftrace deployments.
-- [Falco](https://falco.org/) - Falco, the cloud-native runtime security project, is the de facto Kubernetes threat detection engine
-- [Sysmon for Linux](https://github.com/Sysinternals/SysmonForLinux) - Sysmon For Linux is a security monitoring tool. It depends on [SysinternalsEBPF](https://github.com/Sysinternals/SysinternalsEBPF).
+- [Falco](https://falco.org/) - Falco is a cloud-native runtime security project used as a Kubernetes threat detection engine.
+- [Sysmon for Linux](https://github.com/Sysinternals/SysmonForLinux) - A security monitoring tool. It depends on [SysinternalsEBPF](https://github.com/Sysinternals/SysinternalsEBPF).
 - [Red Canary Linux Agent](https://redcanary.com/blog/ebpf-for-security) - Red Canary has started to incorporate eBPF to their Linux security sensor. 
-- [Tracee](https://github.com/aquasecurity/tracee) - Linux Runtime Security and Forensics using eBPF
+- [Tracee](https://github.com/aquasecurity/tracee) - A runtime security and forensics tool for Linux which uses eBPF technology to trace the system and applications at runtime, and analyze collected events to detect suspicious behavioral patterns.
 - [eBPF for Windows](https://github.com/microsoft/ebpf-for-windows) - This project is a work-in-progress that allows using existing eBPF toolchains and APIs familiar in the Linux ecosystem to be used on top of Windows.
+- [redcanary-ebpf-sensor](https://github.com/redcanaryco/redcanary-ebpf-sensor) - A set of BPF programs that gather security relevant event data from the Linux kernel. The BPF programs are combined into a single ELF file from which we can selectively load individual probes, depending on the operating system and kernel version we’re running on. 
+- [bpflock - Lock Linux machines](https://github.com/linux-lock/bpflock) - An eBPF driven security tool for locking and auditing Linux machines.
+
+# eBPF in Security
+
+- [Embrace The Red: Offensive BPF!](https://embracethered.com/blog/tags/ebpf) - A series of posts around the introduction into BPF with a focus to an offensive setting, and also how its misuse can be detected. Rootkit capabilities of eBPF are discussed too and which tracing is needed for different use cases.
+- [eBPF: Block Linux Fileless Payload "Malware" Execution with BPF LSM](https://djalal.opendz.org/post/ebpf-block-linux-fileless-payload-execution-with-bpf-lsm/) - Blog post about how BPF can help detection and blocking fileless malware.
+- [Blackhat 2021: With Friends Like eBPF, Who Needs Enemies?](https://www.blackhat.com/us-21/briefings/schedule/#with-friends-like-ebpf-who-needs-enemies-23619) - Talk about an eBPF rootkit and how the capabilities of eBPF could be abused.
+- [eBPF, I thought we were friends !](https://defcon.org/html/defcon-29/dc-29-speakers.html#fournier) - Similar talk as at Blackhat 2021, talk about an eBPF rootkit and it's possibilities.
+- [ebpfkit](https://github.com/Gui774ume/ebpfkit) - ebpfkit is a rootkit that leverages multiple eBPF features to implement offensive security techniques.
+- [ebpfkit-monitor](https://github.com/Gui774ume/ebpfkit-monitor) - An utility to statically analyse eBPF bytecode or monitor suspicious eBPF activity at runtime. It was specifically designed to detect ebpfkit.
+- [Bad BPF](https://github.com/pathtofile/bad-bpf) - A collection of malicious eBPF programs that make use of eBPF's ability to read and write user data in between the usermode program and the kernel.
 
 ## The Code
 
@@ -324,18 +336,6 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [linux/net/sched/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/sched) - and in particular in files `act_bpf.c` (action) and `cls_bpf.c` (filter): code related to BPF actions and filters with TC.
 - [linux/kernel/seccomp.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/seccomp.c)
 - [linux/net/core/dev.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/core/dev.c) - contains the function `dev_change_xdp_fd()` that is called through a Netlink command to hook a XDP program to a device, after is has been loaded into the kernel from user space. This function in turns uses a callback from the relevant driver.
-
-## eBPF in Security
-
-- [eBPF for security: a beginner's guide](https://redcanary.com/blog/ebpf-for-security) - Introduction on eBPF and how Red Canary uses it.
-- [Embrace The Red: Offensive BPF!](https://embracethered.com/blog/tags/ebpf) - A series of posts around BPF usage in offensive settings, and also how its misuse can be detected.
-- [Offensive BPF! Getting started](https://embracethered.com/blog/posts/2021/offensive-bpf/) - eBPF’s offensive usage is also slowly getting more attention. So, I decided to dive into the topic from a red teaming point of view to learn about it to raise awareness and share the journey.
-- [eBPF: Block Linux Fileless Payload "Malware" Execution with BPF LSM](https://djalal.opendz.org/post/ebpf-block-linux-fileless-payload-execution-with-bpf-lsm/)
-- eBPF Rootkit
-  - [Blackhat 2021: With Friends Like eBPF, Who Needs Enemies?](https://www.blackhat.com/us-21/briefings/schedule/#with-friends-like-ebpf-who-needs-enemies-23619) - Talk about an eBPF rootkit.
-  - [eBPF, I thought we were friends !](https://defcon.org/html/defcon-29/dc-29-speakers.html#fournier) - Similar talk as at Blackhat 2021, talk about an eBPF rootkit. 
-- [ebpfkit](https://github.com/Gui774ume/ebpfkit) - ebpfkit is a rootkit that leverages multiple eBPF features to implement offensive security techniques.
-- [ebpfkit-monitor](https://github.com/Gui774ume/ebpfkit-monitor) - ebpfkit-monitor is an utility that you can use to statically analyse eBPF bytecode or monitor suspicious eBPF activity at runtime. It was specifically designed to detect ebpfkit.
 
 ## Development and Community
 
