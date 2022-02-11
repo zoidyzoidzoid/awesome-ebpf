@@ -335,6 +335,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
   - [Blackhat 2021: With Friends Like eBPF, Who Needs Enemies?](https://www.blackhat.com/us-21/briefings/schedule/#with-friends-like-ebpf-who-needs-enemies-23619) - Talk about an eBPF rootkit.
   - [eBPF, I thought we were friends !](https://defcon.org/html/defcon-29/dc-29-speakers.html#fournier) - Similar talk as at Blackhat 2021, talk about an eBPF rootkit. 
 - [ebpfkit](https://github.com/Gui774ume/ebpfkit) - ebpfkit is a rootkit that leverages multiple eBPF features to implement offensive security techniques.
+- [ebpfkit-monitor](https://github.com/Gui774ume/ebpfkit-monitor) - ebpfkit-monitor is an utility that you can use to statically analyse eBPF bytecode or monitor suspicious eBPF activity at runtime. It was specifically designed to detect ebpfkit.
 
 ## Development and Community
 
