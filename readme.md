@@ -87,7 +87,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [Linux Kernel Observability through eBPF](https://sematext.com/blog/linux-kernel-observability-ebpf/) - A blog post covering the basics of eBPF as well as code samples in Go on how to build and load a minimal eBPF program into the kernel.
 - [eBPF - From a Programmer's Perspective](https://www.researchgate.net/publication/349173667_eBPF_-_From_a_Programmer's_Perspective) - A short paper describing the fundamentals of eBPF and how to get started with writing eBPF programs.
 - [Cloudflare's blog posts on eBPF](https://blog.cloudflare.com/tag/ebpf/) - Different blog posts about networking use cases and low-level aspects of eBPF.
-- [Linux Extended BPF (eBPF) Tracing Tools](https://www.brendangregg.com/ebpf.html) - A in-depth collection of information around examples of performance analysis tools using eBPF. Contains also a section at the end of the page about other resources.
+- [Linux Extended BPF (eBPF) Tracing Tools](https://www.brendangregg.com/ebpf.html) - An in-depth collection of information around examples of performance analysis tools using eBPF. Contains also a section at the end of the page about other resources.
 
 ### BPF Internals
 
