@@ -311,6 +311,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [eBPF for Windows](https://github.com/microsoft/ebpf-for-windows) - This project is a work-in-progress that allows using existing eBPF toolchains and APIs familiar in the Linux ecosystem to be used on top of Windows.
 - [redcanary-ebpf-sensor](https://github.com/redcanaryco/redcanary-ebpf-sensor) - A set of BPF programs that gather security relevant event data from the Linux kernel. The BPF programs are combined into a single ELF file from which individual probes can be selectively loaded, depending on the running operating system and kernel version.
 - [bpflock - Lock Linux machines](https://github.com/linux-lock/bpflock) - An eBPF driven security tool for locking and auditing Linux machines.
+- [coroot-node-agent](https://github.com/coroot/coroot-node-agent) - An eBPF based Prometheus exporter that gathers comprehensive container metrics such as container-to-container TCP connections, network latency, CPU delay accounting, log summaries, cloud instance metadata, etc. 
 
 # eBPF in Security
 
