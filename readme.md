@@ -321,6 +321,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [ebpfkit](https://github.com/Gui774ume/ebpfkit) - A rootkit that leverages multiple eBPF features to implement offensive security techniques.
 - [ebpfkit-monitor](https://github.com/Gui774ume/ebpfkit-monitor) - An utility to statically analyze eBPF bytecode or monitor suspicious eBPF activity at runtime. It was specifically designed to detect ebpfkit.
 - [Bad BPF](https://github.com/pathtofile/bad-bpf) - A collection of malicious eBPF programs that make use of eBPF's ability to read and write user data in between the usermode program and the kernel.
+- [BPFDoor](https://doublepulsar.com/bpfdoor-an-active-chinese-global-surveillance-tool-54b078f1a896?gi=abbf043312f6) - A stealthy backdoor program which leverages the Berkeley Packet Filter (BPF) on Unix-based systems to hide malicious traffic. PWC first mentioned it in a public report called [_Cyber Threats 2021: A Year in Retrospect_](https://www.pwc.com/gx/en/issues/cybersecurity/cyber-threat-intelligence/cyber-year-in-retrospect/yir-cyber-threats-report-download.pdf). Further research companies wrote about it, e.g. in [BPFDoor: Stealthy Linux malware bypasses firewalls for remote access](https://www.bleepingcomputer.com/news/security/bpfdoor-stealthy-linux-malware-bypasses-firewalls-for-remote-access/).
 
 ## The Code
 
