@@ -313,6 +313,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [eBPF for Windows](https://github.com/microsoft/ebpf-for-windows) - This project is a work-in-progress that allows using existing eBPF toolchains and APIs familiar in the Linux ecosystem to be used on top of Windows.
 - [redcanary-ebpf-sensor](https://github.com/redcanaryco/redcanary-ebpf-sensor) - A set of BPF programs that gather security relevant event data from the Linux kernel. The BPF programs are combined into a single ELF file from which individual probes can be selectively loaded, depending on the running operating system and kernel version.
 - [bpflock - Lock Linux machines](https://github.com/linux-lock/bpflock) - An eBPF driven security tool for locking and auditing Linux machines.
+- [merbridge](https://github.com/merbridge/merbridge/) - Use eBPF to speed up your Service Mesh. Merbridge replaces iptables rules with eBPF to intercept traffic. It also combines msg_redirect to reduce latency with a shortened datapath between sidecars and services.
 
 # eBPF in Security
 
