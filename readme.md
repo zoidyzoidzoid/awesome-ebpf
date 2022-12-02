@@ -294,6 +294,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [bpftrace](https://bpftrace.org/) - A tool for tracing with its own high-level tracing language. It is flexible enough to be envisioned as a Linux replacement for DTrace and SystemTap.
   - [bpftrace Cheat Sheet](https://www.brendangregg.com/BPF/bpftrace-cheat-sheet.html) - Summary and cheat sheet for programming in bpftrace. Contains information about syntax, probe types, variables and functions.
 - [kubectl trace](https://github.com/iovisor/kubectl-trace) - A kubectl plug-in for executing bpftrace programs in a Kubernetes cluster.
+- [inspektor-gadget](https://github.com/inspektor-gadget/inspektor-gadget) - A collection of eBPF-based tools to debug and inspect Kubernetes resources and applications.
 - [bpfd](https://github.com/genuinetools/bpfd) - Framework for running BPF programs with rules on Linux as a daemon. Container aware.
 - [BPFd](https://github.com/joelagnel/bpfd) - A distinct BPF daemon, trying to leverage the flexibility of the bcc tools to trace and debug remote targets, and in particular devices running with Android.
 - [adeb](https://github.com/joelagnel/adeb) - A Linux shell environment for using tracing tools on Android with BPFd.
