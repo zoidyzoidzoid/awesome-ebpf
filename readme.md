@@ -223,6 +223,10 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [aya](https://github.com/aya-rs/aya) - A pure Rust library for writing, loading, and managing eBPF objects, with a focus on developer experience and operability. It supports writing eBPF programs in Rust and distributing library code over crates.io to share it between eBPF programs. Aya does not depend on libbpf.
 - [aya-template](https://github.com/aya-rs/aya-template) - Templates for writing BPF applications in Aya that can be used with [`cargo generate`](https://github.com/cargo-generate/cargo-generate).
 
+### eunomia-bpf
+
+- [eunomia-bpf](https://github.com/eunomia-bpf/eunomia-bpf) - A compile framework and runtime library for build, distribute, dynamically load and run CO-RE eBPF app in multi languages and Webassembly. It supports writing eBPF kernel code only to build simple CO-RE libbpf eBPF applications, writing kernel part in both BCC and libbpf style, and writing userspace in multiple languages in WASM module and distribute with simple JSON data or WASM OCI images. The runtime is based on libbpf only and is able to provide CO-RE to BCC style eBPF program without llvm dependence.
+
 ### oxidebpf
 
 - [oxidebpf](https://github.com/redcanaryco/oxidebpf) - A pure Rust library for managing eBPF programs, designed for security use cases. The featureset is more limited than other libraries but emphasizes stability across a wide range of kernels and backwards-compatible compile-once-run-most-places.
