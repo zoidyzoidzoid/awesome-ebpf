@@ -350,6 +350,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [upf-bpf](https://github.com/navarrothiago/upf-bpf) - An in-kernel solution based on XDP for 5G UPF.
 - [redbpf](https://github.com/foniod/redbpf) - Tooling and framework to write eBPF code in Rust efficiently.
 - [ebpf-explorer](https://github.com/ebpfdev/explorer) - A web interface to explore system's maps and programs.
+- [ebpfmon](https://github.com/redcanaryco/ebpfmon) - A TUI application for real time monitoring of ebpf programs.
 
 # eBPF in Security
 
