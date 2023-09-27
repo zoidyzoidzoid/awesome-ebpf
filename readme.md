@@ -230,7 +230,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 
 - [aya](https://github.com/aya-rs/aya) - A pure Rust library for writing, loading, and managing eBPF objects, with a focus on developer experience and operability. It supports writing eBPF programs in Rust and distributing library code over crates.io to share it between eBPF programs. Aya does not depend on libbpf.
 - [aya-template](https://github.com/aya-rs/aya-template) - Templates for writing BPF applications in Aya that can be used with [`cargo generate`](https://github.com/cargo-generate/cargo-generate).
-- [ebpfguard](https://github.com/deepfence/ebpfguard) - Rust library for writing Linux security policies using eBPF
+- [Ebpfguard](https://github.com/deepfence/ebpfguard) - Rust library for writing Linux security policies using eBPF.
 
 ### zbpf
 
