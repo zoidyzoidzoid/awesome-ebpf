@@ -353,6 +353,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [redbpf](https://github.com/foniod/redbpf) - Tooling and framework to write eBPF code in Rust efficiently.
 - [ebpf-explorer](https://github.com/ebpfdev/explorer) - A web interface to explore system's maps and programs.
 - [ebpfmon](https://github.com/redcanaryco/ebpfmon) - A TUI (terminal user interface) application for real time monitoring of eBPF programs.
+- [Keploy](https://www.keploy.io/) - A developer-centric backend testing tool which makes backend tests with built-in-mocks, faster than unit tests, from user traffic, making it easy to use, powerful, and extensible.
 
 # eBPF in Security
 
