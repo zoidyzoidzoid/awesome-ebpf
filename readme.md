@@ -196,7 +196,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [ebpf-kill-example](https://github.com/niclashedam/ebpf-kill-example) - A fully documented and tested example of an eBPF probe that logs all force-kills and prints them out in user-space.
 - [redbpf examples](https://github.com/foniod/redbpf/tree/main/examples) - Example programs for using RedBPF to write eBPF programs in Rust.
 - [XDP/TC-eBPF example](https://github.com/netfoundry/zfw) - Program that uses XDP/TC-eBPF to provide statefull firewalling and socket redirection.
-  
+
 ## eBPF Workflow: Tools and Utilities
 
 ### bcc
@@ -332,7 +332,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 
 - [Falco](https://falco.org/) - A cloud-native runtime security project used as a Kubernetes threat detection engine.
 - [Sysmon for Linux](https://github.com/Sysinternals/SysmonForLinux) - A security monitoring tool. It depends on [SysinternalsEBPF](https://github.com/Sysinternals/SysinternalsEBPF).
-- [Red Canary Linux Agent](https://redcanary.com/blog/ebpf-for-security) - Red Canary has started to incorporate eBPF to their Linux security sensor. 
+- [Red Canary Linux Agent](https://redcanary.com/blog/ebpf-for-security) - Red Canary has started to incorporate eBPF to their Linux security sensor.
 - [Tracee](https://github.com/aquasecurity/tracee) - A runtime security and forensics tool for Linux which uses eBPF technology to trace the system and applications at runtime, and analyze collected events to detect suspicious behavioral patterns.
 - [redcanary-ebpf-sensor](https://github.com/redcanaryco/redcanary-ebpf-sensor) - A set of BPF programs that gather security relevant event data from the Linux kernel. The BPF programs are combined into a single ELF file from which individual probes can be selectively loaded, depending on the running operating system and kernel version.
 - [bpflock - Lock Linux machines](https://github.com/linux-lock/bpflock) - An eBPF driven security tool for locking and auditing Linux machines.
@@ -363,7 +363,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [ebpfkit](https://github.com/Gui774ume/ebpfkit) - A rootkit that leverages multiple eBPF features to implement offensive security techniques.
 - [ebpfkit-monitor](https://github.com/Gui774ume/ebpfkit-monitor) - An utility to statically analyze eBPF bytecode or monitor suspicious eBPF activity at runtime. It was specifically designed to detect ebpfkit.
 - [Bad BPF](https://github.com/pathtofile/bad-bpf) - A collection of malicious eBPF programs that make use of eBPF's ability to read and write user data in between the usermode program and the kernel.
-- [TripleCross](https://github.com/h3xduck/TripleCross) - A Linux eBPF rootkit with a backdoor, C2, library injection, execution hijacking, persistence and stealth capabilities. 
+- [TripleCross](https://github.com/h3xduck/TripleCross) - A Linux eBPF rootkit with a backdoor, C2, library injection, execution hijacking, persistence and stealth capabilities.
 
 ## The Code
 
