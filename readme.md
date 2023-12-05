@@ -195,7 +195,8 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [ebpf-samples](https://github.com/vbpf/ebpf-samples) - A collection of compiled (as ELF object files) samples gathered from several projects, primarily intended to serve as test cases for user space verifiers.
 - [ebpf-kill-example](https://github.com/niclashedam/ebpf-kill-example) - A fully documented and tested example of an eBPF probe that logs all force-kills and prints them out in user-space.
 - [redbpf examples](https://github.com/foniod/redbpf/tree/main/examples) - Example programs for using RedBPF to write eBPF programs in Rust.
-
+- [XDP/TC-eBPF example](https://github.com/netfoundry/zfw) - Program that uses XDP/TC-eBPF to provide statefull firewalling and socket redirection.
+  
 ## eBPF Workflow: Tools and Utilities
 
 ### bcc
