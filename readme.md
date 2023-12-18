@@ -316,6 +316,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [Project Calico](https://projectcalico.docs.tigera.io/about/about-calico) - Calico is an open source networking and network security solution for containers, virtual machines, and native host-based workloads. Calico's eBPF data plane delivers a low latency, high throughput data plane with a rich network security policy model.
   - [Enabling eBPF data plane with Calico](https://projectcalico.docs.tigera.io/maintenance/ebpf/enabling-bpf)
 - [merbridge](https://github.com/merbridge/merbridge/) - Use eBPF to speed up your Service Mesh. Merbridge replaces iptables rules with eBPF to intercept traffic. It also combines msg_redirect to reduce latency with a shortened datapath between sidecars and services.
+- [PcapPlusPlus](https://pcapplusplus.github.io/) - an open-source C++ library for capturing, parsing and crafting of network packets. It features a C++ interface for creating AF_XDP sockets, making it easy to send and receive packets through them [[learn more](https://pcapplusplus.github.io/docs/next/features#af_xdp-support-beta)].
 
 ### Observability
 
