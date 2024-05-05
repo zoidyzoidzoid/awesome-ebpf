@@ -357,6 +357,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [ebpf-explorer](https://github.com/ebpfdev/explorer) - A web interface to explore system's maps and programs.
 - [ebpfmon](https://github.com/redcanaryco/ebpfmon) - A TUI (terminal user interface) application for real time monitoring of eBPF programs.
 - [bpfman](https://github.com/bpfman/bpfman) - An eBPF Manager for Linux and Kubernetes. Includes a built-in program loader that supports program cooperation for XDP and TC programs, as well as deployment of eBPF programs from OCI images.
+- [ptcpdump](https://github.com/mozillazg/ptcpdump) - A process-aware, eBPF-based tcpdump-like tool.
 
 # eBPF in Security
 
