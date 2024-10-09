@@ -275,6 +275,10 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [A Vagrant setup](https://github.com/iovisor/xdp-vagrant) - To easily test XDP. Less useful now that generic XDP (driver-independant, mostly for testing) exists.
 - [bcc in a Docker container](https://github.com/zlim/bcc-docker)
 
+### yeet
+
+- [yeet](https://yeet.cx/?utm_source=github&utm_medium=awesome-ebpf) - Framework, set of tools, web interface. A dynamic runtime written in rust for deploying eBPF programs and visualizing performance data in real-time.
+
 ## Projects Related to eBPF
 
 ### Networking
