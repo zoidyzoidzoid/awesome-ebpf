@@ -380,6 +380,8 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [Bad BPF](https://github.com/pathtofile/bad-bpf) - A collection of malicious eBPF programs that make use of eBPF's ability to read and write user data in between the usermode program and the kernel.
 - [TripleCross](https://github.com/h3xduck/TripleCross) - A Linux eBPF rootkit with a backdoor, C2, library injection, execution hijacking, persistence and stealth capabilities.
 - [Securing Kubernetes Workloads using LSM-BPF](https://ebpfchirp.substack.com/p/securing-kubernetes-workloads-using) - Learn how tools like KubeArmor leverage LSM-BPF to prevent malicious attacks such as Ransomware or Cryptojacking.
+- [Protecting HashiCorp Vault using KubeArmor](https://ebpfchirp.substack.com/p/protecting-k8s-secrets-using-kubearmor) - Learn how KubeArmor blocks malicious attacks on HashiCorp Vault and why use it instead of solutions like Tetragon or Falco.
+- [Securing AI Jupyter Notebooks using KubeArmor](https://ebpfchirp.substack.com/p/securing-ai-jupyter-notebooks-using) - Learn how KubeArmor can audit and block unauthorized code execution attempts, enforcing runtime security without disrupting legitimate code functionality of Jupyter Notebooks.
 
 ## The Code
 
