@@ -9,6 +9,8 @@
     "remark-validate-links": "^13.0.2"
   },
   "scripts": {
+    "ci-lint": "node_modules/.bin/remark --frail --output /dev/null readme.md --rc-path .github/remarkrc-lint.yml",
+    "ci-link": "node_modules/.bin/remark --frail --output /dev/null readme.md --rc-path .github/remarkrc-linkchecker.yml",
     "lint-md": "node_modules/.bin/remark readme.md"
   },
   "remarkConfig": {
