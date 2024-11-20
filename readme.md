@@ -147,6 +147,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 
 - [BPF Type Format (BTF)](https://www.kernel.org/doc/html/latest/bpf/btf.html) - Kernel documentation about BTF, explaining how to use it.
 - [Enhancing the Linux kernel with BTF type information](https://facebookmicrosites.github.io/bpf/blog/2018/11/14/btf-enhancement.html) - A description of the work done with BTF to provide debugging information for BPF programs.
+- [What is BTF (BPF Type Format)](https://cloudchirp.substack.com/p/what-is-btf-bpf-type-format) - A community-authored newsletter enriched with useful code illustrations and hands-on examples.
 
 ### cBPF
 
@@ -183,6 +184,13 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [A Deep Dive into eBPF: Writing an Efficient DNS Monitoring.](https://medium.com/@nurkholish.halim/a-deep-dive-into-ebpf-writing-an-efficient-dns-monitoring-2c9dea92abdf) - A detailed explanation of methods used to capture DNS requests at the socket filter layer.
 - [eBPF Developer Tutorial - Learn eBPF by examples](https://eunomia.dev/tutorials/) - Start with eBPF basics and progress to advanced topics using 20+ hands-on tutorials and examples. Covers performance, networking, and security with libbpf and CO-RE. Available in Chinese and English.
 - [Catch Performance Regressions in eBPF](https://bencher.dev/docs/explanation/talks/#linuxcon-2023-12-may-23) - A step-by-step guide to benchmarking both the client and kernel eBPF code written in Rust.
+- [Loops and Iterators in eBPF](https://cloudchirp.substack.com/p/loops-and-iterators-in-ebpf) - Newsletter about all the ways to loop and iterate in eBPF.
+- [What Insights Can eBPF Provide into Real-Time SSL/TLS Encrypted Traffic and How?](https://cloudchirp.substack.com/p/what-insights-can-ebpf-provide-into) - A step-by-step guide how eBPF can observe encrypted network traffic.
+- [Can eBPF Detect Redis Message Patterns Before They Become Problems?](https://cloudchirp.substack.com/p/can-ebpf-detect-redis-message-patterns) - A step-by-step guide how eBPF can observe Redis communication between client and server.
+- [Transparent Proxy Implementation using eBPF and Go](https://cloudchirp.substack.com/p/transparent-proxy-implementation) - A step-by-step guide on how to implement a transparent proxy using eBPF.
+- [eBPF-Powered Load Balancing](https://cloudchirp.substack.com/p/ebpf-powered-load-balancing-for-so_reuseport) - Learn how eBPF can infer custom load-balancing for services listening on the same port, through the SO_REUSEPORT TCP option.
+- [Unit Testing eBPF Programs](https://ebpfchirp.substack.com/p/unit-testing-ebpf-programs) - Learh how you can unit test your eBPF programs using libbpf.
+- [Accelerating Local Socket Communication using eBPF](https://cloudchirp.substack.com/p/optimizing-local-socket-communication) - Learn how eBPF can speed-up local socket communication up to 30%.
 
 ## Examples
 
@@ -371,6 +379,9 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [ebpfkit-monitor](https://github.com/Gui774ume/ebpfkit-monitor) - An utility to statically analyze eBPF bytecode or monitor suspicious eBPF activity at runtime. It was specifically designed to detect ebpfkit.
 - [Bad BPF](https://github.com/pathtofile/bad-bpf) - A collection of malicious eBPF programs that make use of eBPF's ability to read and write user data in between the usermode program and the kernel.
 - [TripleCross](https://github.com/h3xduck/TripleCross) - A Linux eBPF rootkit with a backdoor, C2, library injection, execution hijacking, persistence and stealth capabilities.
+- [Securing Kubernetes Workloads using LSM-BPF](https://ebpfchirp.substack.com/p/securing-kubernetes-workloads-using) - Learn how tools like KubeArmor leverage LSM-BPF to prevent malicious attacks such as Ransomware or Cryptojacking.
+- [Protecting HashiCorp Vault using KubeArmor](https://ebpfchirp.substack.com/p/protecting-k8s-secrets-using-kubearmor) - Learn how KubeArmor blocks malicious attacks on HashiCorp Vault and why use it instead of solutions like Tetragon or Falco.
+- [Securing AI Jupyter Notebooks using KubeArmor](https://ebpfchirp.substack.com/p/securing-ai-jupyter-notebooks-using) - Learn how KubeArmor can audit and block unauthorized code execution attempts, enforcing runtime security without disrupting legitimate code functionality of Jupyter Notebooks.
 
 ## The Code
 
