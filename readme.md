@@ -189,7 +189,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [Can eBPF Detect Redis Message Patterns Before They Become Problems?](https://cloudchirp.substack.com/p/can-ebpf-detect-redis-message-patterns) - A step-by-step guide how eBPF can observe Redis communication between client and server.
 - [Transparent Proxy Implementation using eBPF and Go](https://cloudchirp.substack.com/p/transparent-proxy-implementation) - A step-by-step guide on how to implement a transparent proxy using eBPF.
 - [eBPF-Powered Load Balancing](https://cloudchirp.substack.com/p/ebpf-powered-load-balancing-for-so_reuseport) - Learn how eBPF can infer custom load-balancing for services listening on the same port, through the SO_REUSEPORT TCP option.
-- [Unit Testing eBPF Programs](https://ebpfchirp.substack.com/p/unit-testing-ebpf-programs) - Learh how you can unit test your eBPF programs using libbpf.
+- [Unit Testing eBPF Programs](https://ebpfchirp.substack.com/p/unit-testing-ebpf-programs) - Learn how you can unit test your eBPF programs using libbpf.
 - [Accelerating Local Socket Communication using eBPF](https://cloudchirp.substack.com/p/optimizing-local-socket-communication) - Learn how eBPF can speed-up local socket communication up to 30%.
 
 ## Examples
