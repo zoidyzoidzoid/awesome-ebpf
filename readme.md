@@ -191,6 +191,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [eBPF-Powered Load Balancing](https://cloudchirp.substack.com/p/ebpf-powered-load-balancing-for-so_reuseport) - Learn how eBPF can infer custom load-balancing for services listening on the same port, through the SO_REUSEPORT TCP option.
 - [Unit Testing eBPF Programs](https://ebpfchirp.substack.com/p/unit-testing-ebpf-programs) - Learn how you can unit test your eBPF programs using libbpf.
 - [Accelerating Local Socket Communication using eBPF](https://cloudchirp.substack.com/p/optimizing-local-socket-communication) - Learn how eBPF can speed-up local socket communication up to 30%.
+- [Writing a basic continuous profiler](https://blog.maxgio.me/posts/unleashing-power-frame-pointers-writing-simple-continuous-profiler/) - A step-by-step guide to write an appliation continuous profiler leveraging the eBPF instrumentation, with a complete project as a reference.
 
 ## Examples
 
