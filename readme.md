@@ -53,6 +53,7 @@ Recently, [Cilium](https://cilium.io) launched a great website about eBPF called
   - [BPF Verifier Overview](https://www.spinics.net/lists/xdp-newbies/msg00185.html)
 
 - [List of BPF features per kernel version](https://github.com/iovisor/bcc/blob/master/docs/kernel-versions.md)
+- [A List of Research Papers](https://pchaigno.github.io/bpf/2025/01/07/research-papers-bpf.html)
 
 ## Articles and Presentations
 
