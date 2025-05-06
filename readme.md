@@ -331,6 +331,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
   - [Enabling eBPF data plane with Calico](https://projectcalico.docs.tigera.io/maintenance/ebpf/enabling-bpf)
 - [merbridge](https://github.com/merbridge/merbridge/) - Use eBPF to speed up your Service Mesh. Merbridge replaces iptables rules with eBPF to intercept traffic. It also combines msg_redirect to reduce latency with a shortened datapath between sidecars and services.
 - [PcapPlusPlus](https://pcapplusplus.github.io/) - An open-source C++ library for capturing, parsing and crafting network packets. It features a C++ interface for creating AF_XDP sockets, making it easy to [send and receive packets through them](https://pcapplusplus.github.io/docs/next/features#af_xdp-support-beta).
+- [ApFree WiFiDog](https://github.com/liudf0716/apfree-wifidog) - A high performance and lightweight captive portal solution for wireless networks. It leverages eBPF for traffic control and deep packet inspection capabilities, with plans to gradually replace nftables firewall functionality with eBPF-based solutions.
 
 ### Observability
 
