@@ -1,0 +1,25 @@
+name: Markdown Linter
+on:
+  pull_request: {}
+
+jobs:
+  build:
+    name: Install and run linter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Install yarn dependencies
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # runs `yarn install`
+
+      - name: Run linter
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: run ci-lint
