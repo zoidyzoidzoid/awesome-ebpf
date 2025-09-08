@@ -359,8 +359,8 @@ If you are new to eBPF, you may want to try the links described as "introduction
 
 ### Linux Scheduler
 
-- [scx](https://github.com/sched-ext/scx): sched_ext schedulers and tools.
-- [Gthulhu](https://github.com/Gthulhu/Gthulhu): Gthulhu optimizes cloud-native workloads using the Linux Scheduler Extension for different application scenarios.
+- [scx](https://github.com/sched-ext/scx) - sched_ext schedulers and tools.
+- [Gthulhu](https://github.com/Gthulhu/Gthulhu) - Gthulhu optimizes cloud-native workloads using the Linux Scheduler Extension for different application scenarios.
 
 ### Tools
 
