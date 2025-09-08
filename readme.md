@@ -357,6 +357,11 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [Tetragon](https://github.com/cilium/tetragon) - Kubernetes-aware, eBPF-based security observability and runtime enforcement.
 - [harpoon](https://github.com/alegrey91/harpoon) - Trace syscalls from user-space functions, by using eBPF.
 
+### Linux Scheduler
+
+- [scx](https://github.com/sched-ext/scx) - sched_ext schedulers and tools.
+- [Gthulhu](https://github.com/Gthulhu/Gthulhu) - Gthulhu optimizes cloud-native workloads using the Linux Scheduler Extension for different application scenarios.
+
 ### Tools
 
 - [ply](https://wkz.github.io/ply/) - A small but flexible open source dynamic tracer for Linux, with features similar to the bcc tools, but with a simpler language inspired by awk and DTrace.
