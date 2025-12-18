@@ -358,6 +358,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [bpflock - Lock Linux machines](https://github.com/linux-lock/bpflock) - An eBPF driven security tool for locking and auditing Linux machines.
 - [Tetragon](https://github.com/cilium/tetragon) - Kubernetes-aware, eBPF-based security observability and runtime enforcement.
 - [harpoon](https://github.com/alegrey91/harpoon) - Trace syscalls from user-space functions, by using eBPF.
+- [Bombini](https://github.com/bombinisecurity/bombini) - An eBPF-based security agent written entirely in Rust using the [Aya](https://github.com/aya-rs/aya) library and built on LSM (Linux Security Module) BPF hooks.
 
 ### Linux Scheduler
 
