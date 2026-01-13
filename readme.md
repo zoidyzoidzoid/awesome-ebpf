@@ -359,8 +359,8 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [Tetragon](https://github.com/cilium/tetragon) - Kubernetes-aware, eBPF-based security observability and runtime enforcement.
 - [harpoon](https://github.com/alegrey91/harpoon) - Trace syscalls from user-space functions, by using eBPF.
 - [Synapse](https://github.com/gen0sec/synapse) - Extended detection and response (XDR) with eBPF-powered firewall and proxy, to protect your Linux servers.
-- [Bombini](https://github.com/bombinisecurity/bombini) - An eBPF-based security agent written entirely in Rust using the [Aya](https://github.com/aya-rs/aya) library and built on LSM (Linux Security Module) BPF hooks.
 - [BPFJailer](https://github.com/gen0sec/bpfjailer) - BpfJailer is an eBPF-based process jailing system that provides mandatory access control (MAC) for Linux.
+- [Bombini](https://github.com/bombinisecurity/bombini) - An eBPF-based security agent written entirely in Rust using the [Aya](https://github.com/aya-rs/aya) library and built on LSM (Linux Security Module) BPF hooks.
 
 ### Linux Scheduler
 
