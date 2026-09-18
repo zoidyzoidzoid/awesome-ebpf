@@ -390,6 +390,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [ebpfkit-monitor](https://github.com/Gui774ume/ebpfkit-monitor) - An utility to statically analyze eBPF bytecode or monitor suspicious eBPF activity at runtime. It was specifically designed to detect ebpfkit.
 - [Bad BPF](https://github.com/pathtofile/bad-bpf) - A collection of malicious eBPF programs that make use of eBPF's ability to read and write user data in between the usermode program and the kernel.
 - [TripleCross](https://github.com/h3xduck/TripleCross) - A Linux eBPF rootkit with a backdoor, C2, library injection, execution hijacking, persistence and stealth capabilities.
+- [talus-process-monitor](https://github.com/BartoszOsiej/talus-process-monitor) - Ransomware detection tool written in Rust with Aya. Traces execve/openat from the kernel, scores per-process file-open rates in a sliding window, tracks .enc/.locked writes and filename entropy, and can automatically SIGKILL the offending process before encryption completes.
 
 ## The Code
 
