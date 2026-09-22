@@ -390,6 +390,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [ebpfkit-monitor](https://github.com/Gui774ume/ebpfkit-monitor) - An utility to statically analyze eBPF bytecode or monitor suspicious eBPF activity at runtime. It was specifically designed to detect ebpfkit.
 - [Bad BPF](https://github.com/pathtofile/bad-bpf) - A collection of malicious eBPF programs that make use of eBPF's ability to read and write user data in between the usermode program and the kernel.
 - [TripleCross](https://github.com/h3xduck/TripleCross) - A Linux eBPF rootkit with a backdoor, C2, library injection, execution hijacking, persistence and stealth capabilities.
+- [Rustinel](https://github.com/Karib0u/rustinel) - Open-source endpoint detection engine using eBPF on Linux and ETW on Windows, with Sigma, YARA, and IOC detections.
 
 ## The Code
 
