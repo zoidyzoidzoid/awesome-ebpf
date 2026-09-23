@@ -110,6 +110,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [Meet-cute between eBPF and Kernel Tracing](https://www.slideshare.net/slideshow/meet-cutebetweenebpfandtracing/62446985) - Kprobes, uprobes, ftrace.
 - [Linux Kernel Tracing](https://www.slideshare.net/slideshow/linux-kernel-tracing/65201573) - Systemtap, Kernelshark, trace-cmd, LTTng, perf-tool, ftrace, hist-trigger, perf, function tracer, tracepoint, kprobe/uprobe, and more.
 - Brendan Gregg's blog, and in particular [Linux BPF Superpowers](http://www.brendangregg.com/blog/2016-03-05/linux-bpf-superpowers.html) article.
+- [Replacing auditd polling with eBPF tracepoints in a Linux monitoring agent](https://etducky.com/blog/linux-rmm-agent-polling-auditd-ebpf) - An endpoint agent's move from auditd and interval polling to exec/exit, file open/close and connect/accept tracepoints, with the agent's cost on a health-only profile.
 
 ### XDP
 
