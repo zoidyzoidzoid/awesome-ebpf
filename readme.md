@@ -318,6 +318,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [PcapPlusPlus](https://pcapplusplus.github.io/) - An open-source C++ library for capturing, parsing and crafting network packets. It features a C++ interface for creating AF_XDP sockets, making it easy to [send and receive packets through them](https://pcapplusplus.github.io/docs/next/features#af_xdp-support-beta).
 - [ApFree WiFiDog](https://github.com/liudf0716/apfree-wifidog) - A high performance and lightweight captive portal solution for wireless networks. It leverages eBPF for traffic control and deep packet inspection capabilities, with plans to gradually replace nftables firewall functionality with eBPF-based solutions.
 - [ipx_wrap](https://github.com/twisted-pear/ipx_wrap) - A proof-of-concept IPX implementation for Linux using eBPF. 
+- [tcpcat](https://github.com/NycolazSec/tcpcat) - Network reconnaissance and vulnerability scanner for Linux. Its high-throughput scan engine is a hand-assembled eBPF program (built directly with `cilium/ebpf`'s Go assembler, no bpf2go/clang/libbpf step) attached via AF_XDP, redirecting matching packets straight to a userspace AF_XDP socket for SYN scanning.
 
 ### Observability
 
