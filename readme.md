@@ -336,6 +336,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [Coroot](https://github.com/coroot/coroot) - Coroot is an open-source APM and observability tool, a DataDog and NewRelic alternative.
 - [kyanos](https://github.com/hengyoush/kyanos) - Kyanos is an eBPF-based network issue analysis tool that enables you to capture network requests, such as HTTP, Redis, and MySQL requests.
 - [eTraceGen](https://github.com/bhanuprakasheagala/eTraceGen-eBPFEventTelemetryEngine) - eTraceGen is a Linux telemetry engine built with eBPF and Modern C++ that captures kernel-level events for processes, files, system calls, and network with a modular pipeline for decoding, enrichment, filtering, and JSON output.
+- [netwatch](https://github.com/matthart1983/netwatch) - Network diagnostics TUI that uses an eBPF kprobe on `tcp_v4_connect` (loaded via aya from a sibling `netwatch-sdk` crate) for per-process connection attribution. Connection events flow from a kernel-side ringbuffer into the Connections / Packets / Processes tabs in real time, with `lsof` / `ss` as the fallback when the kprobe can't load (no `CAP_BPF` / kernel < 5.10 / non-Linux). Pairs the eBPF path with libpcap-based deep packet inspection across 13 protocols, TCP retransmit analytics, JA4 fingerprinting, and a Landlock sandbox.
 
 ### Security
 
