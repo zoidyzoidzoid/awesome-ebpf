@@ -351,7 +351,8 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [BPFJailer](https://github.com/gen0sec/bpfjailer) - BpfJailer is an eBPF-based process jailing system that provides mandatory access control (MAC) for Linux.
 - [Bombini](https://github.com/bombinisecurity/bombini) - An eBPF-based security agent written entirely in Rust using the [Aya](https://github.com/aya-rs/aya) library and built on LSM (Linux Security Module) BPF hooks.
 - [owLSM](https://github.com/Cybereason-Public/owLSM) - Open source agent that implements a stateful Sigma rules engine focused on monitoring and prevention using eBPF LSM.
-- [Inner Warden](https://github.com/InnerWarden/innerwarden) - A self-defending security agent for Linux and macOS that uses eBPF with 22 kernel hooks (tracepoints, kprobes, LSM, XDP) via the Aya library for real-time threat detection, automated response, and AI-powered triage.
+- [Inner Warden](https://github.com/InnerWarden/innerwarden)
+- [Talus](https://github.com/BartoszOsiej/talus-process-monitor) - eBPF ransomware detection and response agent in Rust: behavioural open-rate scoring with automatic SIGKILL response, single static binary, no kernel modules. - A self-defending security agent for Linux and macOS that uses eBPF with 22 kernel hooks (tracepoints, kprobes, LSM, XDP) via the Aya library for real-time threat detection, automated response, and AI-powered triage.
 
 ### Linux Scheduler
 
