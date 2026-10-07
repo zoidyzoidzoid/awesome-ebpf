@@ -174,6 +174,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [Building BPF applications with libbpf-bootstrap](https://nakryiko.com/posts/libbpf-bootstrap/) - Helps generate minimal or advanced templates to bootstrap your own applications (kernel side and user space management for maps and programs) with features like CO-RE, global variables, and ring buffer.
 - [How I ended up writing opensnoop in pure C using eBPF](https://bolinfest.github.io/opensnoop-native/) - A thorough walk-through of how to write eBPF programs, first using only bpf() syscall, and then libbpf library, with reproducible code examples.
 - [Linux Tracing Workshops Materials](https://github.com/goldshtn/linux-tracing-workshop) - Involves the use of several BPF tools for tracing.
+- [Networking from Scratch](https://github.com/TanayK07/networking-from-scratch) - 289 hands-on lessons covering the full network stack in C and Python, including eBPF-based packet processing, XDP programs, and traffic control.
 - [Tracing a packet journey using Linux tracepoints, perf and eBPF](https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/) - Troubleshooting ping requests and replies with perf and bcc programs.
 - [Open NFP platform](https://open-nfp.org/dataplanes-ebpf/technical-papers/) - Operated by Netronome: some tutorials for network-related eBPF use cases, including an eBPF Offload Starting Guide.
 - [XDP for the Rest of Us](http://netdevconf.org/2.1/session.html?gospodarek) - First edition of a workshop to get started with XDP.
