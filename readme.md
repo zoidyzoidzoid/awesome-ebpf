@@ -352,6 +352,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [Bombini](https://github.com/bombinisecurity/bombini) - An eBPF-based security agent written entirely in Rust using the [Aya](https://github.com/aya-rs/aya) library and built on LSM (Linux Security Module) BPF hooks.
 - [owLSM](https://github.com/Cybereason-Public/owLSM) - Open source agent that implements a stateful Sigma rules engine focused on monitoring and prevention using eBPF LSM.
 - [Inner Warden](https://github.com/InnerWarden/innerwarden) - A self-defending security agent for Linux and macOS that uses eBPF with 22 kernel hooks (tracepoints, kprobes, LSM, XDP) via the Aya library for real-time threat detection, automated response, and AI-powered triage.
+- [Hulios](https://github.com/ghaziwali/Hulios) — An eBPF-powered, zero-leak transparent Tor gateway for Linux that secures outbound network traffic using Cgroup v2 socket hooks and LSM raw socket blockers.
 
 ### Linux Scheduler
 
