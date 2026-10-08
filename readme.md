@@ -380,6 +380,7 @@ If you are new to eBPF, you may want to try the links described as "introduction
 - [GhostScope](https://github.com/swananan/ghostscope) - A DWARF-aware eBPF tracer for source-level userspace tracing, with an interactive TUI and a scriptable CLI.
 - [AgentSight](https://github.com/eunomia-bpf/AgentSight) - Zero-instrumentation eBPF observability for LLM and coding agents, capturing syscall-level traces (file, network, process) without modifying the agent.
 - [ActPlane](https://github.com/eunomia-bpf/ActPlane) - OS-level agent harness that compiles a policy DSL to an in-kernel eBPF engine for labeled information-flow control at the syscall boundary, enforcing constraints across any tool or subprocess.
+- [Keploy](https://keploy.io) - Open-source platform that uses eBPF to capture API and dependency traffic and replay it as tests and mocks in isolated sandboxes, with no code changes.
 
 # eBPF in Security
 
